@@ -9,16 +9,16 @@ using namespace std;
 class Stage
 {
     public: 
-        Stage(); 
+        Stage(string id, string name, string description); 
 
     private: 
         string id; 
         string name; 
         string description; 
-        string neighbour[4]; 
+        string choices[5]; 
 }; 
 
-Stage::Stage()
+Stage::Stage(string id, string name, string description)
 {
 
 }
