@@ -39,7 +39,7 @@ void Game::run() //define void run -> should run/start the game
     //schleife in der das Spiel läuft 
 }
 
-void Game::setUpStage() 
+void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Infos 
 {
     string file = "stages.txt"; //read which file
     ifstream input(file); //Exception Handling? 
