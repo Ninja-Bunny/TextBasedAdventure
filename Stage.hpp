@@ -1,15 +1,15 @@
-#ifndef ROOM_HPP
-#define ROOM_HPP
+#ifndef STAGE_HPP
+#define STAGE_HPP
 #endif
 
 #include <iostream>
 #include <string> 
 using namespace std; 
 
-class Room
+class Stage
 {
     public: 
-        Room(); 
+        Stage(); 
 
     private: 
         string id; 
@@ -18,7 +18,7 @@ class Room
         string neighbour[4]; 
 }; 
 
-Room::Room()
+Stage::Stage()
 {
 
 }
