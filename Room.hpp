@@ -1,5 +1,5 @@
-#ifndef ROOM_H
-#define ROOM_H
+#ifndef ROOM_HPP
+#define ROOM_HPP
 #endif
 
 #include <iostream>
@@ -10,7 +10,6 @@ class Room
 {
     public: 
         Room(); 
-        Room(string id, string name, string description); 
 
     private: 
         string id; 
@@ -21,23 +20,7 @@ class Room
 
 Room::Room()
 {
-    id = ""; 
-    name = ""; 
-    description = ""; 
 
-    for(int i = 0; int i<4; i++)
-    {
-        string neighbour[i] = "NULL"
-    }
 }
 
-Room::Room(string id, string name, string description)
-{
-    this->id = id; 
-    this-> name = name; 
-    this->description = description; 
-//    neighbour[0] = north; 
-    // neighbour[1] = east; 
-    // neighbour[2] = south; 
-    // neighbour[3] = west; 
-}
+
