@@ -1,0 +1,32 @@
+BEGIN_ROOM
+0
+Bedroom
+You just woke up and are very hungry now.
+NORTH   NULL
+EAST    1
+SOUTH   NULL
+WEST    NULL
+END_ROOM
+
+BEGIN_ROOM
+1
+Hallway
+You are in the Hallway. There is a light at the end of it. 
+NORTH   NULL
+EAST    2
+SOUTH   NULL
+WEST    0
+END_ROOM
+
+BEGIN_ROOM
+2
+Kitchen
+You are arrived. There is a lot of food. Life is great. The END. 
+NORTH   NULL
+EAST    NULL
+SOUTH   NULL
+WEST    1
+END_ROOM
+
+START_ROOM 0
+END_ROOM 2

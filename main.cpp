@@ -2,10 +2,11 @@
 
 using namespace std; 
 
-#include "Game.hpp"
+#include "Game.h"
+#include "Room.h"
 
 int main() {
     Game game; 
     game.run(); 
-    return 0; 
+
 }

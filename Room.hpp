@@ -1,44 +1,43 @@
-#ifndef ROOM_HPP
-#define ROOM_HPP
+#ifndef ROOM_H
+#define ROOM_H
 #endif
 
 #include <iostream>
 #include <string> 
 using namespace std; 
 
-struct Room
+class Room
 {
-    Room(string name, string description); 
-    void setNeighbours(Room* north, Room* east, Room* south, Room* west); 
-    void initialization(string name = "", string description = ""); 
+    public: 
+        Room(); 
+        Room(string id, string name, string description); 
 
-    string name; 
-    string description; 
-    Room* north; //eventuell auch array mit nacbarräumen? O.O soll das so kompliziert sein? 
-    Room* east; 
-    Room* south; 
-    Room* west; 
+    private: 
+        string id; 
+        string name; 
+        string description; 
+        string neighbour[4]; 
 }; 
 
-Room::Room(string name, string description)
+Room::Room()
 {
-    initialization(name, description); 
+    id = ""; 
+    name = ""; 
+    description = ""; 
+
+    for(int i = 0; int i<4; i++)
+    {
+        string neighbour[i] = "NULL"
+    }
 }
 
-void Room::setNeighbours(Room* north, Room* east, Room* south, Room* west)
+Room::Room(string id, string name, string description)
 {
-    this->north = north; 
-    this->east = east; 
-    this->south = south; 
-    this->west = west; 
-}
-
-void Room::initialization(string name /* = ""*/, string description /* = ""*/)
-{
-    this->name = name; 
-    this-> description = description; 
-    north = nullptr; 
-    east = nullptr; 
-    south = nullptr; 
-    west = nullptr; 
+    this->id = id; 
+    this-> name = name; 
+    this->description = description; 
+//    neighbour[0] = north; 
+    // neighbour[1] = east; 
+    // neighbour[2] = south; 
+    // neighbour[3] = west; 
 }
