@@ -1,4 +1,4 @@
-BEGIN_ROOM
+BEGIN_STAGE
 0
 Assessment Center
 Du wurdest zum Auswahlverfahren eingeladen! 
@@ -8,9 +8,9 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 1
 Beginn Semester
 Du hast es geschafft und es geht direkt weiter in die Hochschule. 
@@ -20,9 +20,9 @@ CHOICE  C++
 CHOICE  Englisch
 CHOICE  Betriebssysteme
 CHOICE  Informatik 
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 2
 Mathe
 Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage lösen kannst? 
@@ -32,9 +32,9 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 3
 C++
 Deine Programmierkünste in C++ nehmen rasant zu. Weisst du die Lösung?  
@@ -44,9 +44,9 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 4
 Englisch
 We changed the language? How good is your English? 
@@ -56,9 +56,9 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 5
 Betriebssysteme
 Die Prüfung naht, und du hast zu spät zum lernen angefangen.  
@@ -68,9 +68,9 @@ CHOICE  Folie 2
 CHOICE  Die Hälfte
 CHOICE  Keine
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 6
 Informatik
 Hier ist Logik gefragt. Wie logisch arbeitet dein Gehirn? 
@@ -80,9 +80,9 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 7
 Mail vom Chef
 Du erhältst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu überweisen.  
@@ -92,9 +92,9 @@ CHOICE  ablehnen
 CHOICE  Chef anrufen
 CHOICE  NULL
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-BEGIN_ROOM
+BEGIN_STAGE
 8
 Auswertung der Klausuren
 Die Klausurergebnisse sind da! 
@@ -104,7 +104,7 @@ CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  Antwort 1
 CHOICE  NULL
-END_ROOM
+END_STAGE
 
-START_ROOM 0
-END_ROOM 8
+STARTING_STAGE 0
+ENDING_STAGE 8
