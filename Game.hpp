@@ -1,6 +1,6 @@
 #ifndef GAME_HPP
 #define GAME_HPP
-#endif
+
 
 #include <iostream>
 #include <string>
@@ -81,4 +81,4 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 }
 
 
-
+#endif
