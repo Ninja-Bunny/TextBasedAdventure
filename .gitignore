@@ -1,3 +1,10 @@
 .vscode/settings.json
 adventure
 
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings copy.json
+.vscode/tasks.json
+main
+adventure.dSYM/Contents/Info.plist
+main.dSYM/Contents/Info.plist
