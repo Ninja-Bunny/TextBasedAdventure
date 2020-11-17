@@ -1,6 +1,6 @@
 #ifndef STAGE_HPP
 #define STAGE_HPP
-#endif
+
 
 #include <iostream>
 #include <string> 
@@ -33,5 +33,7 @@ Stage::Stage(string id, string name, string description, string question, string
  choices[4] = choice4;
 
 }
+
+#endif
 
 
