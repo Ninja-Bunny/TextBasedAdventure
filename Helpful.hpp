@@ -31,7 +31,7 @@ void Helpful::slowPrinting(string s)
 
 }
 
-void clearScreen()
+void Helpful::clearScreen()
 {
     #ifdef _WIN32
         system("CLS");
