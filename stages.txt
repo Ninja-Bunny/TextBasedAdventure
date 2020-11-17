@@ -1,0 +1,110 @@
+BEGIN_STAGE
+0
+Assessment Center
+Du wurdest zum Auswahlverfahren eingeladen! 
+Hier kommt die ultrawichtige Frage! 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+1
+Beginn Semester
+Du hast es geschafft und es geht direkt weiter in die Hochschule. 
+Mit welchem Fach möchtest du beginnen?  
+CHOICE  Mathe
+CHOICE  C++
+CHOICE  Englisch
+CHOICE  Betriebssysteme
+CHOICE  Informatik 
+END_STAGE
+
+BEGIN_STAGE
+2
+Mathe
+Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage lösen kannst? 
+Hier kommt die ultrawichtige Frage! 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+3
+C++
+Deine Programmierkünste in C++ nehmen rasant zu. Weisst du die Lösung?  
+Hier kommt die ultrawichtige Frage! 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+4
+Englisch
+We changed the language? How good is your English? 
+Hier kommt die ultrawichtige Frage! 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+5
+Betriebssysteme
+Die Prüfung naht, und du hast zu spät zum lernen angefangen.  
+Welche Folien möchtest du lernen? 
+CHOICE  Alle
+CHOICE  Folie 2
+CHOICE  Die Hälfte
+CHOICE  Keine
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+6
+Informatik
+Hier ist Logik gefragt. Wie logisch arbeitet dein Gehirn? 
+Hier kommt die ultrawichtige Frage! 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+7
+Mail vom Chef
+Du erhältst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu überweisen.  
+Was tust du?  
+CHOICE  Geld überweisen
+CHOICE  ablehnen
+CHOICE  Chef anrufen
+CHOICE  NULL
+CHOICE  NULL
+END_STAGE
+
+BEGIN_STAGE
+8
+Auswertung der Klausuren
+Die Klausurergebnisse sind da! 
+Hast du bestanden? 
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  Antwort 1
+CHOICE  NULL
+END_STAGE
+
+STARTING_STAGE 0
+ENDING_STAGE 8
