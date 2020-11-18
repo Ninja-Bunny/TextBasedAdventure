@@ -1,23 +1,27 @@
-#include <iostream> //@Melanie217 strings sind glaube ich in iostream enthalten oder?
+#include <iostream>
 
 using namespace std; 
 
 #include "Game.hpp"
 #include "Helpful.hpp"
 #include "stageMethods.hpp"
+#include "prologue.hpp"
 
 int main() {
 
     clearScreen();
     
 
+    /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
+    //setColour(); 
+    //cout << "test" << endl;
+    prologue();
     Game game; 
     game.run(); 
 
-     //clears Terminal screen
     slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
-    //game.run();
 
-
+    return 0;
 }
+

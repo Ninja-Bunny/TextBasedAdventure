@@ -7,40 +7,35 @@
 #include <map>
 #include "Stage.hpp"
 
-using namespace std; 
-
+using namespace std;
 
 class Game
 {
     public: 
-    Game(); //Konstructor 
-    //~Game(); //Destructor -> brauchen wir den? 
-    void run(); 
-     
-
+        Game(); //Konstruktor 
+        //~Game(); //Destruktor -> brauchen wir den? 
+        void run(); //wichtig, wird in main() aufgerufen
     private: 
-    void setUpStage();
-    void runToPass(); 
-    Stage* currentStage; 
-    Stage* endingStage; 
-    map<string, Stage*> stages; 
-    map<string, Stage*> haveToPass; 
-
-
+        void setUpStage();
+        void runToPass(); 
+        Stage* currentStage; 
+        Stage* endingStage; 
+        map<string, Stage*> stages; 
+        map<string, Stage*> haveToPass; 
 }; 
 
-Game::Game() //define Constructor 
+Game::Game() //Konstruktor Definition 
 {
     currentStage = nullptr; 
     endingStage = nullptr; 
     setUpStage(); 
 }
 
-void Game::run() //define void run -> should run/start the game 
+void Game::run() //run() soll game starten
 {
-    while(currentStage != endingStage) 
+    while(currentStage != endingStage) //Schleife, in der das Spiel läuft 
     {
-        if(stages[currentStage->getNext()]->toPass) //wenn die nächste Stage im verlauf eine ist, die man bestehen muss, geht es hier rein 
+        if(stages[currentStage->getNext()]->toPass) //Wenn die nächste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
             currentStage->run(); 
             runToPass();    //special Teil folgt, da man hier in einem Loop ist 
@@ -48,13 +43,11 @@ void Game::run() //define void run -> should run/start the game
         currentStage->run();
         currentStage=stages[currentStage->getNext()];
     }
-
-    //schleife in der das Spiel läuft 
 }
 
 void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Infos 
 {
-    string file = "stages.txt"; //read which file
+    string file = "stages.txt"; //Auslesen der Infos aus Textdatei
     ifstream input(file); //Exception Handling? 
     string buffer, toPass, stageID, stageName, description, question; //Strings for class Stages
     while (input >> buffer)
@@ -72,17 +65,17 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
             stages[stageID] = new Stage(stageID, stageName, description, question, toPass); //new Stage with input content
             if(stages[stageID]->toPass)
             {
-                haveToPass[stageID] = stages[stageID]; //neue Map mit allen Fächern, die man bestehen muss 
+                haveToPass[stageID] = stages[stageID]; //Neue Map mit allen Fächern, die man bestehen muss 
             }
         } else if (buffer == "STARTING_STAGE")
         {
             input >> buffer; 
-            currentStage = stages[buffer]; //Starting Stage is now the current state
+            currentStage = stages[buffer]; //STARTING_STAGE ist jetzt current state
 
         } else if (buffer == "ENDING_STAGE")
         {
             input >> buffer; 
-            endingStage = stages[buffer]; //so we know when to stop
+            endingStage = stages[buffer]; //Markiert Ende
         }
     }
 }
@@ -107,7 +100,7 @@ void Game::runToPass()
                 slowPrinting(x.second->getName()); 
             }
             cout << endl << ">> "; 
-            //ignoriert alle eingaben, die davor vllt gemacht worden sind
+            //ignoriert alle Eingaben, die davor evtl. gemacht worden sind
             getline(cin, userInput); 
 
             cout << endl; 
@@ -138,4 +131,5 @@ void Game::runToPass()
     currentStage = stages[to_string(stageCounter+1)]; 
 
 }
+
 #endif

@@ -14,12 +14,8 @@ int trandom() {
     return num;
 }
 
-
 void betriebssysteme() {
-    cout << "Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien." << endl;
-    cout << "Welche Folie wird wohl in der Klausur drankommen?" << endl;
     int num = trandom(); 
-
     int guess, tries = 0;
     do {
         cout << "Nenne eine Zahl zwischen 1 und 100: " << endl;
@@ -27,9 +23,9 @@ void betriebssysteme() {
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >=3) 
+        if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
-            cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl; 
+            cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl;
         }
         else if (guess > num) 
         {
@@ -41,14 +37,13 @@ void betriebssysteme() {
         }
         else if (guess == num)
         {
-            cout << "Du hast bestanden!" << endl;  
+            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
         }
         else 
         {
             cout << "Die Eingabe war ungültig." << endl;
         }
-    } while (guess != num && tries < 3); // 3 mal raten? 
-
+    } while (guess != num && tries < 3); //Drei Versuche
 }
 
 

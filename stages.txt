@@ -10,14 +10,14 @@ BEGIN_STAGE
 1
 Beginn Semester
 Du hast es geschafft und es geht direkt weiter in die Hochschule. 
-Dein Stundenplan ist vollgepackt mit vielen wichtigen Fächern.  
+Dein Stundenplan ist vollgepackt mit vielen wichtigen Faechern.  
 PASS 0
 END_STAGE
 
 BEGIN_STAGE
 2
 Mathe
-Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage lösen kannst? 
+Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage loesen kannst? 
 Hier kommt die ultrawichtige Frage! 
 PASS 1
 END_STAGE
@@ -25,7 +25,7 @@ END_STAGE
 BEGIN_STAGE
 3
 C++
-Deine Programmierkünste in C++ nehmen rasant zu. Weisst du die Lösung?  
+Deine Programmierkuenste in C++ nehmen rasant zu. Weisst du die Loesung?  
 Hier kommt die ultrawichtige Frage! 
 PASS 1
 END_STAGE
@@ -41,7 +41,7 @@ END_STAGE
 BEGIN_STAGE
 5
 Betriebssysteme
-Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien.  
+Fuer die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien.  
 Welche Folie wird wohl in der Klausur drankommen? 
 PASS 1
 END_STAGE
@@ -57,7 +57,7 @@ END_STAGE
 BEGIN_STAGE
 7
 Mail vom Chef
-Du erhältst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu überweisen.  
+Du erhaeltst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu ueberweisen.  
 Was tust du?  
 PASS 0
 END_STAGE
