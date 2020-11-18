@@ -8,13 +8,14 @@ using namespace std;
 
 int main() {
     //clearScreen();
-    cout << "test" << endl;
+    //cout << "test" << endl;
     clearScreen();
     
     //setColour(); 
 
     //bs(); //ich teste gerade noch
-    //Game game; 
+    Game game; 
+    game.run(); 
 
      //clears Terminal screen
     //slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text

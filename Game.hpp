@@ -13,7 +13,7 @@ using namespace std;
 class Game
 {
     public: 
-    Game(); //Constructor 
+    Game(); //Konstructor 
     //~Game(); //Destructor -> brauchen wir den? 
     void run(); 
      
@@ -30,11 +30,17 @@ class Game
 Game::Game() //define Constructor 
 {
     currentStage = nullptr; 
+    endingStage = nullptr; 
     setUpStage(); 
 }
 
 void Game::run() //define void run -> should run/start the game 
 {
+    while(currentStage != endingStage) 
+    {
+        currentStage->run(); 
+    }
+
     //schleife in der das Spiel läuft 
 }
 
