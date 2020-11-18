@@ -43,4 +43,9 @@ void hyphens(string title)
     cout << endl;
 }
 
+void sleepFor(int i)
+{
+    this_thread::sleep_for(chrono::microseconds(i));
+}
+
 #endif
