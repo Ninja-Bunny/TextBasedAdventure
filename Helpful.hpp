@@ -29,7 +29,7 @@ void slowPrinting(string s)
     for (int i = 0; i < s.size(); i++) { 
         cout << s[i] << flush; //Buchstabe per Buchstabe ausgabe
         //usleep(10000);  //thread (?) schläft für aktuell 10k Millisekunden
-        this_thread::sleep_for(chrono::microseconds(10000)); 
+        this_thread::sleep_for(chrono::microseconds(10000)); //sollte auf windows funktionieren
     }
      cout << endl; 
 
