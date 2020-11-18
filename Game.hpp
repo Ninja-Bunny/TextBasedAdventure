@@ -48,7 +48,7 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 {
     string file = "stages.txt"; //read which file
     ifstream input(file); //Exception Handling? 
-    string buffer, stageID, stageName, description, question, choice0, choice1, choice2, choice3, choice4; //Strings for class Stages
+    string buffer, stageID, stageName, description, question; //Strings for class Stages
     while (input >> buffer)
     {
         if(buffer == "BEGIN_STAGE")
@@ -58,19 +58,8 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
             getline(input, stageName); 
             getline(input, description); 
             getline(input, question); 
-
-            input >> buffer; 
-            getline(input, choice0);
-            input >> buffer; 
-            getline(input, choice1); 
-            input >> buffer; 
-            getline(input, choice2);
-            input >> buffer; 
-            getline(input, choice3);
-            input >> buffer; 
-            getline(input, choice4);
             
-            stages[stageID] = new Stage(stageID, stageName, description, question, choice0, choice1, choice2, choice3, choice4); //new Stage with input content
+            stages[stageID] = new Stage(stageID, stageName, description, question); //new Stage with input content
         } else if (buffer == "STARTING_STAGE")
         {
             input >> buffer; 
