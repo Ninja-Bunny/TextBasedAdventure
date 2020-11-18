@@ -7,14 +7,17 @@ using namespace std;
 #include "Betriebssysteme.hpp"
 
 int main() {
+    //clearScreen();
+    cout << "test" << endl;
     clearScreen();
-    setColour(); 
+    
+    //setColour(); 
 
     //bs(); //ich teste gerade noch
-    Game game; 
+    //Game game; 
 
      //clears Terminal screen
-    slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
+    //slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
     //game.run();
 
 
