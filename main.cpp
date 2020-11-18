@@ -7,11 +7,9 @@ using namespace std;
 #include "stageMethods.hpp"
 
 int main() {
-    //clearScreen();
-    //cout << "test" << endl;
+
     clearScreen();
     
-    //setColour(); 
 
     //betriebssysteme(); //ich teste gerade noch
     Game game; 
