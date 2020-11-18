@@ -14,13 +14,21 @@ void bs() {
         tries++;
 
         if (guess > num) 
+        {
             cout << "Die Zahl " << guess << " war leider zu hoch, versuche es nochmal: " << endl;
+        }
         else if (guess < num)
+        {
             cout << "die Zahl " << guess << " war leider zu niedrig, versuche es nochmal: " << endl;
+        }
         else if (guess == num)
+        {
             cout << "Du hast bestanden!" << endl;  
+        }
         else 
+        {
             cout << "Die Eingabe war ungültig." << endl;
+        }
     } while (guess != num);
 
 }
