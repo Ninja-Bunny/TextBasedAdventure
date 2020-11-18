@@ -7,14 +7,25 @@
 
 using namespace std;
 
+int trandom() {
+    int num;
+    srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
+    num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
+    return num;
+}
+
+
 void bs() {
     cout << "Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien." << endl;
     cout << "Welche Folie wird wohl in der Klausur drankommen?" << endl;
-    int num, guess, tries = 0;
+    int num = trandom(); 
+
+    int guess, tries = 0;
     do {
         cout << "Nenne eine Zahl zwischen 1 und 100: " << endl;
         cin >> guess;
         tries++;
+
         if(tries >=3) 
         {
             cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl; 
@@ -39,11 +50,5 @@ void bs() {
 
 }
 
-int trandom() {
-    int num;
-    srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
-    num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
-    return num;
-}
 
 #endif

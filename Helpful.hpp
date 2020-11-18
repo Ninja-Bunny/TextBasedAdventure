@@ -11,6 +11,9 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include <thread>
+#include <chrono>
+
 
 using namespace std; 
 
@@ -24,8 +27,9 @@ using namespace std;
 void slowPrinting(string s)
 {
     for (int i = 0; i < s.size(); i++) { 
-        cout << s[i] << flush; //char by char output, flush to clear 
-        usleep(10000);  //thread (?) sleeps for 10k Milliseconds -> we can change that accordingly 
+        cout << s[i] << flush; //Buchstabe per Buchstabe ausgabe
+        //usleep(10000);  //thread (?) schläft für aktuell 10k Millisekunden
+        this_thread::sleep_for(chrono::microseconds(10000)); 
     }
      cout << endl; 
 
@@ -39,13 +43,5 @@ void clearScreen()
         system("clear");
     #endif
 }
-
-void setColour()
-{
-    system("Color 1A"); 
-    cout << "test" << endl; 
-}
-
-
 
 #endif
