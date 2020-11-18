@@ -10,7 +10,7 @@ int main() {
     clearScreen();
     //setColour(); 
 
-    //bs(); //ich teste gerade noch
+    bs(); //ich teste gerade noch
     Game game; 
 
      //clears Terminal screen
