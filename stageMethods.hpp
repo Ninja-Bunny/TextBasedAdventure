@@ -25,7 +25,7 @@ void betriebssysteme() {
 
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
-            cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl; 
+            cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl;
         }
         else if (guess > num) 
         {
@@ -37,7 +37,7 @@ void betriebssysteme() {
         }
         else if (guess == num)
         {
-            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;  
+            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
         }
         else 
         {

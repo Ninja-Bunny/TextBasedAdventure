@@ -5,14 +5,14 @@ using namespace std;
 #include "Game.hpp"
 #include "Helpful.hpp"
 #include "stageMethods.hpp"
+#include "prologue.hpp"
 
 int main() {
     /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
-    //clearScreen();
     //setColour(); 
     //cout << "test" << endl;
-
+    prologue();
     Game game; 
     game.run(); 
 
@@ -20,3 +20,4 @@ int main() {
 
     return 0;
 }
+

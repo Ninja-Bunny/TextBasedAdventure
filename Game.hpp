@@ -131,4 +131,5 @@ void Game::runToPass()
     currentStage = stages[to_string(stageCounter+1)]; 
 
 }
+
 #endif

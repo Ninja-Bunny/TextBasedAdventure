@@ -26,7 +26,7 @@ void slowPrinting(string s)
 {
     for (int i = 0; i < s.size(); i++) { 
         cout << s[i] << flush; //Ausgabe Buchstabe per Buchstabe 
-        this_thread::sleep_for(chrono::microseconds(40000)); 
+        this_thread::sleep_for(chrono::microseconds(50000)); 
     }
     cout << endl; 
 
