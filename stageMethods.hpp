@@ -1,5 +1,5 @@
-#ifndef BETRIEBSSYSTEME_HPP
-#define BETRIEBSSYSTEME_HPP
+#ifndef STAGEMETHODS_HPP
+#define STAGEMETHODS_HPP
 
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
@@ -15,7 +15,7 @@ int trandom() {
 }
 
 
-void bs() {
+void betriebssysteme() {
     cout << "Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien." << endl;
     cout << "Welche Folie wird wohl in der Klausur drankommen?" << endl;
     int num = trandom(); 

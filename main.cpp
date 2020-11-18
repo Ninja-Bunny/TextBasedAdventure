@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Game.hpp"
 #include "Helpful.hpp"
-#include "Betriebssysteme.hpp"
+#include "stageMethods.hpp"
 
 int main() {
     //clearScreen();
@@ -13,7 +13,7 @@ int main() {
     
     //setColour(); 
 
-    //bs(); //ich teste gerade noch
+    //betriebssysteme(); //ich teste gerade noch
     Game game; 
     game.run(); 
 

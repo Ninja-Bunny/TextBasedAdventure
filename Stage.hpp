@@ -4,7 +4,9 @@
 
 #include <iostream>
 #include <string> 
-#include "Betriebssysteme.hpp"
+#include "stageMethods.hpp"
+#include "Helpful.hpp"
+
 using namespace std; 
 
 class Stage
@@ -15,7 +17,7 @@ class Stage
         string getName(); 
         string getDescription(); 
         string getQuestion(); 
-
+        string getNext();
     private: 
         string id;  //stageID
         string name; //stageName
@@ -40,7 +42,7 @@ void Stage::run()
     
     if (this->name == "Assessment Center")
     {
-
+        
     } else if (this->name == "Beginn Semester")
     {
 
@@ -55,7 +57,7 @@ void Stage::run()
         
     } else if (this->name == "Betriebssysteme")
     {
-        bs(); 
+        betriebssysteme(); 
     } else if (this->name == "Informatik")
     {
         
@@ -82,6 +84,13 @@ string Stage::getDescription()
 string Stage::getQuestion()
 {
     return question; 
+}
+string Stage::getNext()
+{
+    int i = stoi(id);
+    ++i;
+    string s = to_string(i);
+    return s;
 }
 
 
