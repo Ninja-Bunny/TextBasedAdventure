@@ -40,6 +40,12 @@ void clearScreen()
     #endif
 }
 
+void setColour()
+{
+    system("Color 1A"); 
+    cout << "test" << endl; 
+}
+
 
 
 #endif

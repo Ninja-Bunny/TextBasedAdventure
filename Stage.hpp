@@ -4,12 +4,14 @@
 
 #include <iostream>
 #include <string> 
+#include "Betriebssysteme.hpp"
 using namespace std; 
 
 class Stage
 {
     public: 
         Stage(string id, string name, string description, string question, string choice0, string choice1, string choice2, string choice3, string choice4); 
+        void run(); 
 
     private: 
         string id;  //stageID
@@ -32,6 +34,13 @@ Stage::Stage(string id, string name, string description, string question, string
  choices[3] = choice3;
  choices[4] = choice4;
 
+}
+void Stage::run()
+{
+    if (this->name == "Betriebssysteme")
+    {
+        bs(); 
+    }
 }
 
 #endif

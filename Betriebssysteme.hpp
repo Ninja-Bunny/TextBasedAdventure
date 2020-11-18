@@ -1,3 +1,6 @@
+#ifndef BETRIEBSSYSTEME_HPP
+#define BETRIEBSSYSTEME_HPP
+
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
@@ -42,3 +45,5 @@ int trandom() {
     num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
     return num;
 }
+
+#endif

@@ -8,7 +8,9 @@ using namespace std;
 
 int main() {
     clearScreen();
-    bs(); //ich teste gerade noch
+    setColour(); 
+
+    //bs(); //ich teste gerade noch
     Game game; 
 
      //clears Terminal screen
