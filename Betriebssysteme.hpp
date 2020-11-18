@@ -12,8 +12,11 @@ void bs() {
         cout << "Nenne eine Zahl zwischen 1 und 100: " << endl;
         cin >> guess;
         tries++;
-
-        if (guess > num) 
+        if(tries >=3) 
+        {
+            cout << "Leider falsch. Deine Zeit ist abgelaufen." << endl; 
+        }
+        else if (guess > num) 
         {
             cout << "Die Zahl " << guess << " war leider zu hoch, versuche es nochmal: " << endl;
         }
@@ -29,7 +32,7 @@ void bs() {
         {
             cout << "Die Eingabe war ungültig." << endl;
         }
-    } while (guess != num);
+    } while (guess != num && tries < 3); // 3 mal raten? 
 
 }
 
