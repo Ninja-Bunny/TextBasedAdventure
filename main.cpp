@@ -9,9 +9,9 @@ using namespace std;
 int main() {
     bs(); //ich teste gerade noch
     Game game; 
-    Helpful h; 
-    h.clearScreen(); //clears Terminal screen
-    h.slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
+
+    clearScreen(); //clears Terminal screen
+    slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
     //game.run();
 
 

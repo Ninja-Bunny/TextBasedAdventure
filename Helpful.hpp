@@ -14,14 +14,14 @@
 
 using namespace std; 
 
-class Helpful 
+/*class Helpful 
 {
    public: 
    void slowPrinting(string s);  
    void clearScreen(); 
-}; 
+}; */
 
-void Helpful::slowPrinting(string s)
+void slowPrinting(string s)
 {
     for (int i = 0; i < s.size(); i++) { 
         cout << s[i] << flush; //char by char output, flush to clear 
@@ -31,7 +31,7 @@ void Helpful::slowPrinting(string s)
 
 }
 
-void Helpful::clearScreen()
+void clearScreen()
 {
     #ifdef _WIN32
         system("CLS");
