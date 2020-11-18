@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     clearScreen();
-    setColour(); 
+    //setColour(); 
 
     //bs(); //ich teste gerade noch
     Game game; 
