@@ -61,8 +61,8 @@ END_STAGE
 BEGIN_STAGE
 5
 Betriebssysteme
-Die Prüfung naht, und du hast zu spät zum lernen angefangen.  
-Welche Folien möchtest du lernen? 
+Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien.  
+Welche Folie wird wohl in der Klausur drankommen? 
 CHOICE  Alle
 CHOICE  Folie 2
 CHOICE  Die Hälfte
