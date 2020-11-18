@@ -12,6 +12,9 @@ class Stage
     public: 
         Stage(string id, string name, string description, string question, string choice0, string choice1, string choice2, string choice3, string choice4); 
         void run(); 
+        string getName(); 
+        string getDescription(); 
+        string getQuestion(); 
 
     private: 
         string id;  //stageID
@@ -37,10 +40,54 @@ Stage::Stage(string id, string name, string description, string question, string
 }
 void Stage::run()
 {
-    if (this->name == "Betriebssysteme")
+    slowPrinting(name); 
+    slowPrinting(description); 
+    slowPrinting(question); 
+    
+    if (this->name == "Assessment Center")
+    {
+
+    } else if (this->name == "Beginn Semester")
+    {
+
+    } else if (this->name == "Mathe")
+    {
+        
+    } else if (this->name == "C++")
+    {
+        
+    } else if (this->name == "Englisch")
+    {
+        
+    } else if (this->name == "Betriebssysteme")
     {
         bs(); 
+    } else if (this->name == "Informatik")
+    {
+        
+    } else if (this->name == "Mail vom Chef")
+    {
+        
+    } else if (this->name == "Auswertung der Klausuren")
+    {
+
+    } else 
+    {
+        cout << "error" << endl;  
     }
+}
+
+string Stage::getName()
+{
+    return name; 
+} 
+string Stage::getDescription()
+{
+    return description; 
+} 
+string Stage::getQuestion()
+{
+    return question; 
 }
 
 
