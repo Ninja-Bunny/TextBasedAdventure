@@ -18,7 +18,7 @@ int main() {
     game.run(); 
 
      //clears Terminal screen
-    //slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
+    slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
     //game.run();
 
 
