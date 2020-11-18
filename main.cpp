@@ -1,4 +1,4 @@
-#include <iostream> //@Melanie217 strings sind glaube ich in iostream enthalten oder?
+#include <iostream>
 
 using namespace std; 
 
@@ -7,19 +7,16 @@ using namespace std;
 #include "stageMethods.hpp"
 
 int main() {
-    //clearScreen();
-    //cout << "test" << endl;
-    clearScreen();
-    
-    //setColour(); 
-
+    /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
+    //clearScreen();
+    //setColour(); 
+    //cout << "test" << endl;
+
     Game game; 
     game.run(); 
 
-     //clears Terminal screen
     slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
-    //game.run();
 
-
+    return 0;
 }

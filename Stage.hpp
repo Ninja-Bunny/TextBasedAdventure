@@ -42,13 +42,9 @@ Stage::Stage(string id, string name, string description, string question, string
 }
 void Stage::run()
 {
-    cout << "|| "; 
-    slowPrinting(name + " ||"); 
-    for(int i = 0; i < ("|| " + name + " ||").size(); i++)
-    {
-        cout << "-"; 
-    }
-    cout << endl; 
+    hyphens(name); //Trennstriche
+    slowPrinting("|| " + name + " ||"); //Überschrift bzw. Name der Stage
+    hyphens(name);
     slowPrinting(description); 
     slowPrinting(question); 
     cout << endl; 
