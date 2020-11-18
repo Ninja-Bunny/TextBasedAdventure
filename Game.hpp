@@ -38,7 +38,8 @@ void Game::run() //define void run -> should run/start the game
 {
     while(currentStage != endingStage) 
     {
-        currentStage->run(); 
+        currentStage->run();
+        currentStage=stages[currentStage->getNext()];
     }
 
     //schleife in der das Spiel läuft 

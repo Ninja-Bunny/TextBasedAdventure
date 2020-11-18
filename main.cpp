@@ -13,12 +13,9 @@ int main() {
     
     //setColour(); 
 
-    //bs(); //ich teste gerade noch
+    //betriebssysteme(); //ich teste gerade noch
     Game game; 
-<<<<<<< HEAD
-=======
     game.run(); 
->>>>>>> origin/working
 
      //clears Terminal screen
     slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
