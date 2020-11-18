@@ -23,15 +23,17 @@ class Stage
         string name; //stageName
         string description; //shortTest
         string question; //Question to Answer
+        bool passed; 
 }; 
 
 Stage::Stage(string id, string name, string description, string question)
 {
     //Konstruktor
- this->id = id; 
- this->name = name; 
- this->description = description; 
- this-> question = question; 
+    this->id = id; 
+    this->name = name; 
+    this->description = description; 
+    this-> question = question; 
+    passed = false; 
 
 }
 void Stage::run()
@@ -43,31 +45,40 @@ void Stage::run()
     if (this->name == "Assessment Center")
     {
         
-    } else if (this->name == "Beginn Semester")
+    } 
+    else if (this->name == "Beginn Semester")
     {
 
-    } else if (this->name == "Mathe")
+    } 
+    else if (this->name == "Mathe")
     {
         
-    } else if (this->name == "C++")
+    } 
+    else if (this->name == "C++")
     {
         
-    } else if (this->name == "Englisch")
+    } 
+    else if (this->name == "Englisch")
     {
         
-    } else if (this->name == "Betriebssysteme")
+    } 
+    else if (this->name == "Betriebssysteme")
     {
         betriebssysteme(); 
-    } else if (this->name == "Informatik")
+    } 
+    else if (this->name == "Informatik")
     {
         
-    } else if (this->name == "Mail vom Chef")
+    } 
+    else if (this->name == "Mail vom Chef")
     {
         
-    } else if (this->name == "Auswertung der Klausuren")
+    } 
+    else if (this->name == "Auswertung der Klausuren")
     {
 
-    } else 
+    } 
+    else 
     {
         cout << "error" << endl;  
     }
