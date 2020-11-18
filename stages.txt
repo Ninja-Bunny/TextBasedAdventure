@@ -3,13 +3,15 @@ BEGIN_STAGE
 Assessment Center
 Du wurdest zum Auswahlverfahren eingeladen! 
 Hier kommt die ultrawichtige Frage! 
+PASS 0
 END_STAGE
 
 BEGIN_STAGE
 1
 Beginn Semester
 Du hast es geschafft und es geht direkt weiter in die Hochschule. 
-Mit welchem Fach möchtest du beginnen?  
+Dein Stundenplan ist vollgepackt mit vielen wichtigen Fächern.  
+PASS 0
 END_STAGE
 
 BEGIN_STAGE
@@ -17,6 +19,7 @@ BEGIN_STAGE
 Mathe
 Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage lösen kannst? 
 Hier kommt die ultrawichtige Frage! 
+PASS 1
 END_STAGE
 
 BEGIN_STAGE
@@ -24,6 +27,7 @@ BEGIN_STAGE
 C++
 Deine Programmierkünste in C++ nehmen rasant zu. Weisst du die Lösung?  
 Hier kommt die ultrawichtige Frage! 
+PASS 1
 END_STAGE
 
 BEGIN_STAGE
@@ -31,6 +35,7 @@ BEGIN_STAGE
 Englisch
 We changed the language? How good is your English? 
 Hier kommt die ultrawichtige Frage! 
+PASS 1
 END_STAGE
 
 BEGIN_STAGE
@@ -38,6 +43,7 @@ BEGIN_STAGE
 Betriebssysteme
 Für die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien.  
 Welche Folie wird wohl in der Klausur drankommen? 
+PASS 1
 END_STAGE
 
 BEGIN_STAGE
@@ -45,6 +51,7 @@ BEGIN_STAGE
 Informatik
 Hier ist Logik gefragt. Wie logisch arbeitet dein Gehirn? 
 Hier kommt die ultrawichtige Frage! 
+PASS 1
 END_STAGE
 
 BEGIN_STAGE
@@ -52,6 +59,7 @@ BEGIN_STAGE
 Mail vom Chef
 Du erhältst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu überweisen.  
 Was tust du?  
+PASS 0
 END_STAGE
 
 BEGIN_STAGE
@@ -59,6 +67,7 @@ BEGIN_STAGE
 Auswertung der Klausuren
 Die Klausurergebnisse sind da! 
 Hast du bestanden? 
+PASS 0
 END_STAGE
 
 STARTING_STAGE 0

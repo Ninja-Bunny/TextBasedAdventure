@@ -12,35 +12,46 @@ using namespace std;
 class Stage
 {
     public: 
-        Stage(string id, string name, string description, string question); 
+        Stage(string id, string name, string description, string question, string toPass); 
         void run(); 
+        string getID(); 
         string getName(); 
         string getDescription(); 
         string getQuestion(); 
         string getNext();
+        bool toPass;
     private: 
         string id;  //stageID
         string name; //stageName
         string description; //shortTest
         string question; //Question to Answer
+         //Muss das Fach bestanden werden? 
         bool passed; 
 }; 
 
-Stage::Stage(string id, string name, string description, string question)
+Stage::Stage(string id, string name, string description, string question, string toPass)
 {
     //Konstruktor
     this->id = id; 
     this->name = name; 
     this->description = description; 
     this-> question = question; 
+    this->toPass = stoi(toPass); //in txt file wird übergeben, ob man bestehen muss, oder nicht, umwandeln in int, damit man 1, oder 0 an bool übergeben kann
     passed = false; 
 
 }
 void Stage::run()
 {
-    slowPrinting(name); 
+    cout << "|| "; 
+    slowPrinting(name + " ||"); 
+    for(int i = 0; i < ("|| " + name + " ||").size(); i++)
+    {
+        cout << "-"; 
+    }
+    cout << endl; 
     slowPrinting(description); 
     slowPrinting(question); 
+    cout << endl; 
     
     if (this->name == "Assessment Center")
     {
@@ -82,6 +93,10 @@ void Stage::run()
     {
         cout << "error" << endl;  
     }
+}
+string Stage::getID()
+{
+    return id; 
 }
 
 string Stage::getName()

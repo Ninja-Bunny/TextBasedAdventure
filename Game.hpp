@@ -20,9 +20,11 @@ class Game
 
     private: 
     void setUpStage();
+    void runToPass(); 
     Stage* currentStage; 
     Stage* endingStage; 
     map<string, Stage*> stages; 
+    map<string, Stage*> haveToPass; 
 
 
 }; 
@@ -38,7 +40,12 @@ void Game::run() //define void run -> should run/start the game
 {
     while(currentStage != endingStage) 
     {
+        if(stages[currentStage->getNext()]->toPass) 
+        {
+            runToPass(); 
+        }
         currentStage->run();
+        
         currentStage=stages[currentStage->getNext()];
     }
 
@@ -49,7 +56,7 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 {
     string file = "stages.txt"; //read which file
     ifstream input(file); //Exception Handling? 
-    string buffer, stageID, stageName, description, question; //Strings for class Stages
+    string buffer, toPass, stageID, stageName, description, question; //Strings for class Stages
     while (input >> buffer)
     {
         if(buffer == "BEGIN_STAGE")
@@ -59,8 +66,14 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
             getline(input, stageName); 
             getline(input, description); 
             getline(input, question); 
+            input >> buffer; 
+            input >> toPass;
             
-            stages[stageID] = new Stage(stageID, stageName, description, question); //new Stage with input content
+            stages[stageID] = new Stage(stageID, stageName, description, question, toPass); //new Stage with input content
+            if(stages[stageID]->toPass)
+            {
+                haveToPass[stageID] = stages[stageID]; //neue Map mit allen Fächern, die man bestehen muss 
+            }
         } else if (buffer == "STARTING_STAGE")
         {
             input >> buffer; 
@@ -72,5 +85,53 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
             endingStage = stages[buffer]; //so we know when to stop
         }
     }
+}
+
+void Game::runToPass()
+{   
+    int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
+    string userInput = ""; 
+    string sName = ""; 
+    bool input; 
+
+    while(!haveToPass.empty()) 
+    {
+        input = false; 
+        currentStage->run(); 
+        haveToPass.erase(currentStage->getID()); //löscht Stage from have to Pass
+        ++stageCounter; 
+
+        while(!input) {
+            slowPrinting("Welches Fach möchtest du bestreiten?"); 
+            cout << endl; 
+            for(auto const& x : haveToPass)
+            {
+                cout << "~ "; 
+                slowPrinting(x.second->getName()); 
+            }
+            cout << endl << ">> "; 
+            getline(cin, userInput); 
+            cout << endl; 
+            transform(userInput.begin(), userInput.end(), userInput.begin(), ::tolower);
+            
+            for(auto const& x : haveToPass) 
+            {
+                sName = x.second->getName(); 
+                transform(sName.begin(), sName.end(), sName.begin(), ::tolower);
+
+                if(sName == userInput)
+                {
+                    currentStage = stages[x.first]; 
+                    input = true; 
+                }
+            }
+            if(!input) 
+            {
+                slowPrinting("Keine Übereinstimmung mit dem Stundenplan. Bitte versuche es erneut."); 
+            }
+        }
+
+    }
+
 }
 #endif
