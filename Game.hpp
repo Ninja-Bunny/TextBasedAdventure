@@ -40,12 +40,12 @@ void Game::run() //define void run -> should run/start the game
 {
     while(currentStage != endingStage) 
     {
-        if(stages[currentStage->getNext()]->toPass) 
+        if(stages[currentStage->getNext()]->toPass) //wenn die nächste Stage im verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
-            runToPass(); 
+            currentStage->run(); 
+            runToPass();    //special Teil folgt, da man hier in einem Loop ist 
         }
         currentStage->run();
-        
         currentStage=stages[currentStage->getNext()];
     }
 
@@ -97,10 +97,7 @@ void Game::runToPass()
     while(!haveToPass.empty()) 
     {
         input = false; 
-        currentStage->run(); 
-        haveToPass.erase(currentStage->getID()); //löscht Stage from have to Pass
-        ++stageCounter; 
-
+        
         while(!input) {
             slowPrinting("Welches Fach möchtest du bestreiten?"); 
             cout << endl; 
@@ -110,7 +107,9 @@ void Game::runToPass()
                 slowPrinting(x.second->getName()); 
             }
             cout << endl << ">> "; 
+            //ignoriert alle eingaben, die davor vllt gemacht worden sind
             getline(cin, userInput); 
+
             cout << endl; 
             transform(userInput.begin(), userInput.end(), userInput.begin(), ::tolower);
             
@@ -128,10 +127,15 @@ void Game::runToPass()
             if(!input) 
             {
                 slowPrinting("Keine Übereinstimmung mit dem Stundenplan. Bitte versuche es erneut."); 
+                cout << endl; 
             }
         }
+        currentStage->run(); 
+        haveToPass.erase(currentStage->getID()); //löscht Stage from have to Pass
+        ++stageCounter; 
 
     }
+    currentStage = stages[to_string(stageCounter+1)]; 
 
 }
 #endif
