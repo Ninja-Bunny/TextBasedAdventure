@@ -13,7 +13,7 @@ class Stage
 {
     public: 
         Stage(string id, string name, string description, string question, string toPass); 
-        void run(); 
+        bool run(); 
         string getID(); 
         string getName(); 
         string getDescription(); 
@@ -40,7 +40,7 @@ Stage::Stage(string id, string name, string description, string question, string
     passed = false; 
 
 }
-void Stage::run()
+bool Stage::run()
 {
     bool good = false; 
     hyphens(name); //Trennstriche
@@ -53,7 +53,8 @@ void Stage::run()
     if (this->name == "Assessment Center")
     {
         good = assessment();
-        if (good) //fixed :) 
+        
+        /*if (good) //fixed :) 
         {
             cout << endl << "success" << endl;
         }
@@ -63,7 +64,8 @@ void Stage::run()
         else 
         {
             cout << "error!";
-        }
+        }*/
+        return good; 
     } 
     else if (this->name == "Beginn Semester")
     {

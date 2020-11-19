@@ -38,10 +38,10 @@ void Game::run() //run() soll game starten
     {
         if(stages[currentStage->getNext()]->toPass) //Wenn die nächste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
-            currentStage->run(); 
+            fail(currentStage->run()); 
             runToPass();    //special Teil folgt, da man hier in einem Loop ist 
         }
-        currentStage->run();
+        fail(currentStage->run());
         currentStage=stages[currentStage->getNext()];
     }
 }
@@ -135,7 +135,13 @@ void Game::runToPass()
 
 void Game::fail(bool b)
 {
-    //hier kommt rein was passiert, wenn man durchfält in einer stage
+    if(!b)
+    {
+        clearScreen(); 
+        slowPrinting("YOU FAILED"); 
+        slowPrinting("Diesmal hat es nicht gereicht. WIr sehen uns beim nächsten Versuch!"); 
+        exit(0); 
+    }
 }
 
 #endif
