@@ -9,11 +9,6 @@ using namespace std;
 
 int main() {
 
-    /* TESTING */
-    //betriebssysteme(); //ich teste gerade noch
-    //cout << "test" << endl;
-    //Game game; 
-    //game.run(); 
     Game game; //erstellt neue Game instanz
     clearScreen(); 
 
