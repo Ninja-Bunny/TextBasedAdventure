@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string> 
 //#include "stageMethods.hpp"
-#include "Helpful.hpp"
+#include "../include/Helpful.hpp"
 
 
 using namespace std; 

@@ -2,8 +2,8 @@
 
 using namespace std; 
 
-#include "Game.hpp"
-#include "Helpful.hpp"
+#include "../include/Game.hpp"
+#include "../include/Helpful.hpp"
 //#include "stageMethods.hpp"
 
 

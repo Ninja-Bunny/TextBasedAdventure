@@ -1,13 +1,13 @@
 #ifndef BEGINSEMESTER_HPP
 #define BEGINSEMESTER_HPP
 
-#include "Stage.hpp"
+#include "../include/Stage.hpp"
 #include <iostream>
 #include <string> 
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime>
-#include "Helpful.hpp"
+#include "../include/Helpful.hpp"
 
 class BeginnSemester : public Stage{
     public: 

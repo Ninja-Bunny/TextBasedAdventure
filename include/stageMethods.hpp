@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
-#include "Helpful.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 

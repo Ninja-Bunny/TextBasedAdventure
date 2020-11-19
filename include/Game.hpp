@@ -5,17 +5,17 @@
 #include <iostream>
 #include <fstream>
 #include <map>
-#include "Stage.hpp"
-#include "Assessment.hpp"
-#include "BeginnSemester.hpp"
-#include "Betriebssysteme.hpp"
-#include "Chef.hpp"
-#include "Englisch.hpp"
-#include "Informatik.hpp"
-#include "Mathe.hpp"
-#include "Programmieren.hpp"
-#include "Auswertung.hpp"
-#include "Helpful.hpp"
+#include "../include/Stage.hpp"
+#include "../include/Assessment.hpp"
+#include "../include/BeginnSemester.hpp"
+#include "../include/Betriebssysteme.hpp"
+#include "../include/Chef.hpp"
+#include "../include/Englisch.hpp"
+#include "../include/Informatik.hpp"
+#include "../include/Mathe.hpp"
+#include "../include/Programmieren.hpp"
+#include "../include/Auswertung.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 

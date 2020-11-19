@@ -7,8 +7,8 @@
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime>
-#include "Helpful.hpp"
-#include "Stage.hpp"
+#include "../include/Helpful.hpp"
+#include "../include/Stage.hpp"
 
 class Assessment : public Stage{
     public: 

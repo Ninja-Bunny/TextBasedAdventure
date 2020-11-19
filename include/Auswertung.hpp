@@ -1,13 +1,13 @@
 #ifndef AUSWERTUNG_HPP
 #define AUSWERTUNG_HPP
 
-#include "Stage.hpp"
+#include "../include/Stage.hpp"
 #include <iostream>
 #include <string> 
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime>
-#include "Helpful.hpp"
+#include "../include/Helpful.hpp"
 
 class Auswertung : public Stage{
     public: 
