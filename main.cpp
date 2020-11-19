@@ -19,11 +19,12 @@ int main() {
 
     if(game.prologue()) //wenn user spielen will -> starte spiel
     {
+        clearScreen();
         game.run(); 
     }
     else 
     {
-        cout << "Schade! Dann bis zu nächsten Mal!";
+        cout << endl << "Schade! Dann bis zum naechsten Mal!";
     }
     return 0;
 }

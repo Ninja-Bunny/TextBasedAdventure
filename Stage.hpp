@@ -42,6 +42,7 @@ Stage::Stage(string id, string name, string description, string question, string
 }
 bool Stage::run()
 {
+    clearScreen();
     bool good = false; 
     hyphens(name); //Trennstriche
     slowPrinting("|| " + name + " ||"); //Überschrift bzw. Name der Stage
@@ -86,7 +87,7 @@ bool Stage::run()
     } 
     else if (this->name == "Betriebssysteme")
     {
-       return betriebssysteme(); 
+        return betriebssysteme(); 
 
     } 
     else if (this->name == "Informatik")
