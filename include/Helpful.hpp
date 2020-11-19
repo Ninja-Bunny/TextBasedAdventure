@@ -58,6 +58,13 @@ void hyphens(string title)
     cout << endl;
 }
 
-
+void stars(string title)
+{
+    for(int i = 0; i < (title.size() +2); i++) //Sterne in Länge der Überschrift
+    {
+        cout << "*";
+    }
+    cout << endl;
+}
 
 #endif

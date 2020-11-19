@@ -166,39 +166,38 @@ bool mathe() {
 }
 
 bool programmieren() {
+    int a = 3, b = 2, z;
+    b = a++;
+    int ergebnis = ++b;
     cout << endl;
-    string firstLine = "| int a = 3;";
-    string lastLine = "| cout << ++b;";
-    hyphens(lastLine);
-    cout << "| int a = 3;" << endl;
-    cout << "| int b = 2;" << endl;
-    cout << "| b = a++;" << endl;
-    cout << "| cout << ++b;" << endl;
-    cout << endl;
-
-	const unsigned int x = 5, y = 5; 
-    char frame[x][y] = { '\0' }; 
-    for(unsigned int i = 0; i < x; ++i) 
-    { 
-		frame[i][0] = '#'; 
-        frame[i][y - 1] = '#'; 
-        for(unsigned int j = 0; j < y; ++j) 
-        { 
-			frame[0][j] = '#'; 
-            frame[y - 1][j] = '#'; 
-        }                                             
+    string longestLine = "| cout << ++b;";
+    stars(longestLine);
+    cout << "* int a = 3;   *" << endl;
+    cout << "* int b = 2;   *" << endl;
+    cout << "* b = a++;     *" << endl;
+    cout << "* cout << ++b; *" << endl;
+    stars(longestLine);
+    cout << endl << ">> ";
+    cin >> z;
+    cin.ignore();
+    if (z == ergebnis)
+    {
+        slowPrinting("Das ist korrekt!");
+        cout << endl;
+        sleepFor(1000000);
+        return true;
     }
-	for(int i = 0; i < y; i++) 
-	{    
-		for(int j = 0; j < x; j++) 
-		{
-		      cout << frame[i][j]; 
-		
-		}
-                cout << endl; // NICHT-VERGESSEN!
-	}
-
-    return true;
+    else 
+    {
+        slowPrinting("Leider falsch, schaue dir die folgende Erklaerung aus der Vorlesung nochmal an:");
+        cout << endl;
+        cout << "Prefix increments the value, and then proceeds with the expression." << endl;
+        cout << "Postfix evaluates the expression and then performs the incrementing." << endl << endl;
+        slowPrinting("Wenn du fertig bist, druecke einfach Enter!");
+        sleepFor(1000000);
+        cin;
+        return false;
+    }
 }
 
 bool englisch() {

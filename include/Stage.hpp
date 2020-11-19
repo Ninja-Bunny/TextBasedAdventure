@@ -38,6 +38,7 @@ Stage::Stage()
 
 void Stage::run()
 {
+    clearScreen();
     bool good = false; 
     int sID = stoi(this->id); 
     cout << endl; 

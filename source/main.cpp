@@ -4,15 +4,15 @@ using namespace std;
 
 #include "../include/Game.hpp"
 #include "../include/Helpful.hpp"
-//#include "stageMethods.hpp"
+#include "../include/stageMethods.hpp"
 
 
 int main() {
 
     /* TESTING */
-    programmieren();
+    //programmieren();
     
-    /*Game game; //erstellt neue Game Instanz
+    Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
     if(game.prologue()) //Wenn user spielen will -> starte spiel
@@ -23,6 +23,7 @@ int main() {
     else 
     {
         cout << endl << "Schade! Dann bis zum naechsten Mal!";
-    }*/
+    }
+    
     return 0;
 }

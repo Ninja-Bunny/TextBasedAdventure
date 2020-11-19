@@ -9,23 +9,23 @@
 #include <ctime>
 #include "../include/Helpful.hpp"
 
-class BeginnSemester : public Stage{
+class BeginSemester : public Stage{
     public: 
-        BeginnSemester(); 
+        BeginSemester(); 
         bool specificRun(); 
 
 }; 
 
-BeginnSemester::BeginnSemester()
+BeginSemester::BeginSemester()
 {
     this -> id = "1";
-    this->name = "Beginn Semester"; 
+    this->name = "Begin Semester"; 
     this->description = "Du hast es geschafft und es geht direkt weiter in die Hochschule.";
     this->description2 = "Dein Stundenplan ist vollgepackt mit vielen wichtigen Faechern.";
     this->toPass = false;  
 }
 
-bool BeginnSemester::specificRun()
+bool BeginSemester::specificRun()
 {
     return true;
 }
