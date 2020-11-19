@@ -20,14 +20,15 @@ void betriebssysteme()
     int num = trandom(); 
     int guess, tries = 0;
     do {
-        cout << "Nenne eine Zahl zwischen 1 und 100: " << endl;
+        slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
+        cout << endl; 
         cin >> guess;
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
-            cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
         }
         else if (guess > num) 
         {
@@ -50,6 +51,8 @@ void betriebssysteme()
 
 bool assessment() 
 {
+    bool a1 = false; //antwort 1
+    bool a2 = false; //antwort 2
     sleepFor(1000000);
     slowPrinting("Vor Ort hat der Personaler einige Fragen an dich. ");
     sleepFor(2000000);
@@ -65,22 +68,25 @@ bool assessment()
 
     int answer1;
     cin >> answer1;
+    cin.ignore(); 
     switch (answer1) 
     {
         case 1:
             slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es wie eine Zurückweisung wirkt.");
-            return false;
+            cout << endl; 
+            a1 = false; //hier bist du immer direkt aus der ganzen funktion rausgeflogen, wegen dem return statement
             break;
         case 2:
             slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es unangebracht ist Sonderwuensche zu äussern.");
-            return false;
+            cout << endl; 
+            a1 = false;
             break;
         case 3:
             slowPrinting("Sehr gut, du hast alles richtig gemacht!");
-            return true;
+            a1 = true;
             break;
         default:
-            return false;
+            a1 = false;
     } 
 
     cout << "2. Frage: 'Wo hat die Deutsche Telekom AG ihren Hauptsitz?'" << endl;
@@ -91,23 +97,34 @@ bool assessment()
 
     int answer2;
     cin >> answer2;
+    cin.ignore(); 
+
     switch (answer2)
     {
         case 1:
             slowPrinting("Leider falsch, Bonn wäre die richtige Antwort gewesen");
-            return false;
+            a2 = false;
             break;
         case 2:
             slowPrinting("Richtig, der Hauptsitz der Telekom ist in Bonn.");
-            return true;
+            a2 = true;
             break;
         case 3:
             slowPrinting("Leider falsch, Bonn wäre die richtige Antwort gewesen");
-            return false;
+            a2 = false;
             break;
         default:
-            return false;
+            a2 = false;
     }
+    if(!a1 && !a2) //nur wenn beide Antworten falsch waren fliegt man raus 
+    {
+        return false; 
+    }
+    else
+    {
+        return true; 
+    }
+    
 }
 
 bool mathe() {

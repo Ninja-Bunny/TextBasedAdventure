@@ -12,24 +12,24 @@ int main() {
     clearScreen();
     /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
-    //setColour(); 
     //cout << "test" << endl;
-    Game game; 
-    game.run(); 
+    //Game game; 
+    //game.run(); 
+    bool start = prologue(); 
+    clearScreen(); 
 
-    /*prologue();
-    if (prologue() == true) 
+    if(start)
     {
         Game game; 
         game.run(); 
     }
-    else if (prologue() == false) {
+    else if (!start) {
         cout << "Schade!";
     }
     else 
     {
         cout << "Schade!";
-    }*/
+    }
 
     return 0;
 }

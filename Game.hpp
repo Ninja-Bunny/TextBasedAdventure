@@ -18,6 +18,7 @@ class Game
     private: 
         void setUpStage();
         void runToPass(); 
+        void fail(bool b); 
         Stage* currentStage; 
         Stage* endingStage; 
         map<string, Stage*> stages; 
@@ -130,6 +131,11 @@ void Game::runToPass()
     }
     currentStage = stages[to_string(stageCounter+1)]; 
 
+}
+
+void Game::fail(bool b)
+{
+    //hier kommt rein was passiert, wenn man durchfält in einer stage
 }
 
 #endif

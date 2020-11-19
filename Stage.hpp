@@ -42,6 +42,7 @@ Stage::Stage(string id, string name, string description, string question, string
 }
 void Stage::run()
 {
+    bool good = false; 
     hyphens(name); //Trennstriche
     slowPrinting("|| " + name + " ||"); //Überschrift bzw. Name der Stage
     hyphens(name);
@@ -51,13 +52,13 @@ void Stage::run()
     
     if (this->name == "Assessment Center")
     {
-        assessment();
-        if (assessment() == true) //plz fix
+        good = assessment();
+        if (good) //fixed :) 
         {
-            cout << "success";
+            cout << endl << "success" << endl;
         }
-        else if (assessment() == false) {
-            cout << "fail";
+        else if (!good) {
+            cout << endl << "fail" << endl;
         }
         else 
         {

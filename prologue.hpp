@@ -10,9 +10,10 @@ bool prologue() //Evtl. k√∂nnten wir das auch in die Game Klasse packen? dann m√
 {
     slowPrinting("Denkst du wirklich du bist der Herausforderung eines dualen Studiums im Fach IT-Security gewachsen?");
     slowPrinting("Nunja ");
-    for (int i; i < 3; i++) 
+    cout << endl; 
+    for (int i = 0; i < 3; i++) 
     {
-        cout << ". ";
+        cout << "." << endl; ;
         sleepFor(500000);
     }
     cout << endl;
