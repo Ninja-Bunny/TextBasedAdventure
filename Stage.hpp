@@ -60,92 +60,6 @@ void Stage::run()
     slowPrinting(description2); 
     cout << endl; 
 
-    /*switch(sID)
-    {
-        case 0:
-            return specificRun(); 
-            break; 
-        case 1:
-            return true; //?? Beginn Semester
-            break; 
-        case 2: 
-            return mathe(); 
-            break; 
-        case 3: 
-            return programmieren(); 
-            break; 
-        case 4: 
-            return englisch(); 
-            break; 
-        case 5: 
-            return betriebssysteme(); 
-            break; 
-        case 6: 
-            return informatik(); 
-            break; 
-        case 7: 
-            return chef(); 
-            break; 
-        case 8: 
-            return auswertung(); 
-    }
-    return false; */
-    
-    /*if (this->name == "Assessment Center")
-    {
-        good = assessment();
-        
-        if (good) //fixed :) 
-        {
-            cout << endl << "success" << endl;
-        }
-        else if (!good) {
-            cout << endl << "fail" << endl;
-        }
-        else 
-        {
-            cout << "error!";
-        }
-        return good; 
-    } 
-    else if (this->name == "Beginn Semester")
-    {
-        return true;
-    } 
-    else if (this->name == "Mathe")
-    {
-        return true;
-    } 
-    else if (this->name == "C++")
-    {
-        return true;
-    } 
-    else if (this->name == "Englisch")
-    {
-        return true;
-    } 
-    else if (this->name == "Betriebssysteme")
-    {
-        betriebssysteme(); 
-        return true;
-    } 
-    else if (this->name == "Informatik")
-    {
-        return true;
-    } 
-    else if (this->name == "Mail vom Chef")
-    {
-        return true;
-    } 
-    else if (this->name == "Auswertung der Klausuren")
-    {
-        return true;
-    } 
-    else 
-    {
-        cout << "error" << endl;  
-        return false; 
-    }*/
 }
 string Stage::getID()
 {
@@ -171,13 +85,6 @@ string Stage::getNext()
     string s = to_string(i);
     return s;
 }
-
-/* bool Stage::specificRun()
-{
-    //literally do nothing
-    return true; 
-}*/
-
 
 #endif
 
