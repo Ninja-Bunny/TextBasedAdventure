@@ -21,7 +21,8 @@ class Stage
         string getDescription(); 
         string getDescription2(); 
         string getNext();
-        bool specificRun(); 
+        virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden. = 0 weil? i dunno? aber es geht
+
         bool toPass;
     protected: 
         string id;  //stageID
@@ -171,11 +172,11 @@ string Stage::getNext()
     return s;
 }
 
-bool Stage::specificRun()
+/* bool Stage::specificRun()
 {
     //literally do nothing
     return true; 
-}
+}*/
 
 
 #endif
