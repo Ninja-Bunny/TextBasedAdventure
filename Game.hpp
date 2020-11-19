@@ -86,38 +86,6 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
     }
     currentStage = stages["0"]; 
     endingStage = stages["8"]; 
-    /*string file = "stages.txt"; //Auslesen der Infos aus Textdatei
-    ifstream input(file); //Exception Handling? 
-    string buffer, toPass, stageID, stageName, description, description2; //Strings for class Stages
-    while (input >> buffer) //liest Strings aus txt file  
-    {
-        if(buffer == "BEGIN_STAGE")
-        {
-            input >> stageID; 
-            input.ignore(); 
-            getline(input, stageName); 
-            getline(input, description); 
-            getline(input, description2); 
-            input >> buffer; 
-            input >> toPass;
-            
-            stages[stageID] = new Stage(stageID, stageName, description, description2, toPass); //new Stage with input content
-            if(stages[stageID]->toPass)
-            {
-                haveToPass[stageID] = stages[stageID]; //Neue Map mit allen Fächern, die man bestehen muss 
-            }
-        } else if (buffer == "STARTING_STAGE")
-        {
-            input >> buffer; 
-            currentStage = stages[buffer]; //STARTING_STAGE ist jetzt current state
-
-        } else if (buffer == "ENDING_STAGE")
-        {
-            input >> buffer; 
-            endingStage = stages[buffer]; //Markiert Ende
-        }
-    }*/
-
 }
 
 bool Game::runToPass()
@@ -216,14 +184,13 @@ bool Game::prologue()
     string begin;
     cin >> begin;
     cin.ignore(); 
-    if (begin == "Ja")
+    cout << endl; 
+    if (begin == "Ja" || begin == "ja")
     {
-        //cout << "Ja";
         return true;
     }
-    else if (begin == "Nein")
+    else if (begin == "Nein" || begin == "nein")
     {
-        //cout << "Nein";
         return false;
     }
     else

@@ -19,10 +19,10 @@ class Englisch : public Stage{
 Englisch::Englisch()
 {
     this -> id = "4";
-    this->name = "Mail vom Chef"; 
-    this->description = "Du erhaeltst eine Top Secret Mail von deinem Chef, der dich bittet sofort und diskret 10.000 EUR an eurern Partner zu ueberweisen.";
-    this->description2 = "Was tust du?";
-    this->toPass = false;
+    this->name = "Englisch"; 
+    this->description = "We changed the language? How good is your English? ";
+    this->description2 = "Are you ready? 3 2 1     Goooooo";
+    this->toPass = true;
 }
 
 bool Englisch::specificRun()

@@ -27,7 +27,7 @@ Betriebssysteme::Betriebssysteme()
 
 bool Betriebssysteme::specificRun()
 {
-   int num = trandom(); 
+    int num = trandom(); 
     bool passed = false; 
     int guess, tries = 0;
     do {
