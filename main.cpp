@@ -10,18 +10,26 @@ using namespace std;
 int main() {
 
     clearScreen();
-    
-
     /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
     //setColour(); 
     //cout << "test" << endl;
-    prologue();
     Game game; 
     game.run(); 
 
-    slowPrinting("Das hier ist ein Test. Wirst du das Spiel bestehen? Oder wirst du davor sterben?"); //slow prints text
+    /*prologue();
+    if (prologue() == true) 
+    {
+        Game game; 
+        game.run(); 
+    }
+    else if (prologue() == false) {
+        cout << "Schade!";
+    }
+    else 
+    {
+        cout << "Schade!";
+    }*/
 
     return 0;
 }
-

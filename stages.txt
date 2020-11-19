@@ -1,8 +1,8 @@
 BEGIN_STAGE
 0
 Assessment Center
-Du wurdest zum Auswahlverfahren eingeladen! 
-Hier kommt die ultrawichtige Frage! 
+Herzlichen Glueckwunsch!
+Du wurdest zum Auswahlverfahren eingeladen.
 PASS 0
 END_STAGE
 

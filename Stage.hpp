@@ -51,7 +51,18 @@ void Stage::run()
     
     if (this->name == "Assessment Center")
     {
-        
+        assessment();
+        if (assessment() == true) //plz fix
+        {
+            cout << "success";
+        }
+        else if (assessment() == false) {
+            cout << "fail";
+        }
+        else 
+        {
+            cout << "error!";
+        }
     } 
     else if (this->name == "Beginn Semester")
     {
