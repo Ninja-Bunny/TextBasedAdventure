@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Game.hpp"
 #include "Helpful.hpp"
-#include "stageMethods.hpp"
+//#include "stageMethods.hpp"
 
 
 int main() {

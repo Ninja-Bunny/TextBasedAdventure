@@ -27,7 +27,7 @@ BeginnSemester::BeginnSemester()
 
 bool BeginnSemester::specificRun()
 {
-    
+    return true;
 }
 
 #endif

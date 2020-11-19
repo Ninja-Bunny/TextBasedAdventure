@@ -26,7 +26,7 @@ Auswertung::Auswertung()
 }
 bool Auswertung::specificRun()
 {
-
+ return true; 
 }
 
 #endif

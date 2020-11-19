@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <string> 
-#include "stageMethods.hpp"
+//#include "stageMethods.hpp"
 #include "Helpful.hpp"
 
 
@@ -15,7 +15,7 @@ class Stage
     public: 
         Stage(string id, string name, string description, string description2, string toPass); 
         Stage(); 
-        bool run(); 
+        void run(); 
         string getID(); 
         string getName(); 
         string getDescription(); 
@@ -48,7 +48,7 @@ Stage::Stage(string id, string name, string description, string description2, st
     passed = false; 
 
 }
-bool Stage::run()
+void Stage::run()
 {
     bool good = false; 
     int sID = stoi(this->id); 

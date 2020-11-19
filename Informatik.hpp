@@ -27,6 +27,6 @@ Informatik::Informatik()
 
 bool Informatik::specificRun()
 {
-    
+    return true;
 }
 #endif

@@ -27,6 +27,6 @@ Mathe::Mathe()
 
 bool Mathe::specificRun()
 {
-    
+    return true;
 }
 #endif

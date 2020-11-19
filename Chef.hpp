@@ -27,6 +27,6 @@ Chef::Chef()
 
 bool Chef::specificRun()
 {
-    
+    return true;
 }
 #endif

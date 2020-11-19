@@ -26,6 +26,6 @@ Programmieren::Programmieren()
 }
 bool Programmieren::specificRun()
 {
-    
+    return true;
 }
 #endif
