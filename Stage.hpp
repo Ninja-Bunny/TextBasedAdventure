@@ -79,7 +79,7 @@ bool Stage::run()
     } 
     else if (this->name == "C++")
     {
-        return programmieren;
+        return programmieren();
     } 
     else if (this->name == "Englisch")
     {

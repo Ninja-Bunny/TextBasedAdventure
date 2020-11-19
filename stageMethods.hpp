@@ -150,6 +150,7 @@ bool mathe() {
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
     cout << endl << ">> ";
     cin >> z;
+    cin.ignore(); 
     if (z == ergebnis) 
     {
         slowPrinting("Super! Das Ergebnis lautet 1, genauso wie deine Note im Fach Mathematik.");
