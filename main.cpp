@@ -16,8 +16,9 @@ int main() {
     //game.run(); 
     Game game; //erstellt neue Game instanz
     clearScreen(); 
+    game.run(); 
 
-    if(game.prologue()) //wenn user spielen will -> starte spiel
+    /*if(game.prologue()) //wenn user spielen will -> starte spiel
     {
         game.run(); 
     }
@@ -25,5 +26,5 @@ int main() {
     {
         cout << "Schade! Dann bis zu nächsten Mal!";
     }
-    return 0;
+    return 0;*/
 }

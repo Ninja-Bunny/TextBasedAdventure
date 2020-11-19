@@ -1,62 +1,31 @@
-#ifndef STAGEMETHODS_HPP
-#define STAGEMETHODS_HPP
+#ifndef ASSESSMENT_HPP
+#define ASSESSMENT_HPP
 
+#include "Stage.hpp"
+#include <iostream>
+#include <string> 
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
-#include <ctime> //Zeit-Funktion
+#include <ctime>
 #include "Helpful.hpp"
 
-using namespace std;
+class Assessment : public Stage{
+    public: 
+        Assessment(); 
+        bool specificRun(); 
 
-/*int trandom() {
-    int num;
-    srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
-    num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
-    return num;
-}*/
+}; 
 
-bool betriebssysteme() 
+Assessment::Assessment()
 {
-    int num = trandom(); 
-    bool passed = false; 
-    int guess, tries = 0;
-    do {
-        slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
-        cout << endl; 
-        cin >> guess;
-        cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
-        tries++;
-
-        if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
-        {
-            cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
-            passed = false; 
-        }
-        else if (guess > num) 
-        {
-            cout << "Die Zahl " << guess << " war leider zu hoch, versuche es nochmal: " << endl;
-            passed = false; 
-        }
-        else if (guess < num)
-        {
-            cout << "die Zahl " << guess << " war leider zu niedrig, versuche es nochmal: " << endl;
-            passed = false; 
-        }
-        else if (guess == num)
-        {
-            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
-            passed = true; 
-        }
-        else 
-        {
-            cout << "Die Eingabe war ungültig." << endl;
-            passed = false; 
-        }
-    } while (guess != num && tries < 3); //Drei Versuche
-    return passed; 
+    this -> id = "0"; 
+    this->name = "Assessment Center"; 
+    this->description = "Herzlichen Glueckwunsch!";
+    this->description2 = "Du wurdest zum Auswahlverfahren eingeladen.";
+    this->toPass = false;  
 }
 
-bool assessment() 
+bool Assessment::specificRun()
 {
     bool a1 = false; //antwort 1
     bool a2 = false; //antwort 2
@@ -133,33 +102,6 @@ bool assessment()
     {
         return true; 
     }
-    
-}
-
-bool mathe() {
-    return true;
-}
-
-bool programmieren() {
-    return true;
-}
-
-bool englisch() {
-    return true;
-}
-
-bool informatik() {
-    return true;
-}
-
-bool chef() {
-    return true;
-}
-
-bool auswertung() {
-    return true;
 }
 
 #endif
-
-
