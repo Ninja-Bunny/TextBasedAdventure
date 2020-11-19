@@ -4,16 +4,16 @@
 #include <iostream>
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
-#include "Helpful.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 
-int trandom() {
+/*int trandom() {
     int num;
     srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
     num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
     return num;
-}
+}*/
 
 bool betriebssysteme() 
 {
@@ -150,7 +150,7 @@ bool mathe() {
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
     cout << endl << ">> ";
     cin >> z;
-    cin.ignore();
+    cin.ignore(); 
     if (z == ergebnis) 
     {
         slowPrinting("Super! Das Ergebnis lautet 1, genauso wie deine Note im Fach Mathematik.");

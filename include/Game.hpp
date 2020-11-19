@@ -5,8 +5,17 @@
 #include <iostream>
 #include <fstream>
 #include <map>
-#include "Stage.hpp"
-#include "Helpful.hpp"
+#include "../include/Stage.hpp"
+#include "../include/Assessment.hpp"
+#include "../include/BeginnSemester.hpp"
+#include "../include/Betriebssysteme.hpp"
+#include "../include/Chef.hpp"
+#include "../include/Englisch.hpp"
+#include "../include/Informatik.hpp"
+#include "../include/Mathe.hpp"
+#include "../include/Programmieren.hpp"
+#include "../include/Auswertung.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 
@@ -17,6 +26,7 @@ class Game
         //~Game(); //Destruktor -> brauchen wir den? 
         void run(); //wichtig, wird in main() aufgerufen
         bool prologue(); //startet Prolog
+
     private: 
         void setUpStage(); //liest stages aus txt ein
         bool runToPass(); // lässt die Fächer laufen, die man bestehen muss 
@@ -25,13 +35,15 @@ class Game
         Stage* currentStage; //Pointer, der auf die aktuelle Stage zeigt
         Stage* endingStage; //Pointer, der auf die End Stage zeigt
         map<string, Stage*> stages; //speichert alle stages
+        //map<int, Stage*> stages; 
         map<string, Stage*> haveToPass; //speichert die Stages, die man bestehen muss 
 }; 
 
 Game::Game() //Konstruktor Definition 
 {
     currentStage = nullptr; 
-    endingStage = nullptr; 
+    endingStage = nullptr;
+    
     setUpStage(); 
 }
 
@@ -41,47 +53,39 @@ void Game::run() //run() soll game starten
     {
         if(stages[currentStage->getNext()]->toPass) //Wenn die nächste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
-            fail(currentStage->run()); 
+            currentStage->run(); 
+            fail(currentStage->specificRun()); 
             fail(runToPass());    //special Teil folgt, da man hier in einem Loop ist 
         }
-        fail(currentStage->run());
+        currentStage->run();
+        fail(currentStage->specificRun());
         currentStage=stages[currentStage->getNext()];
     }
+    currentStage->run();
+    endingStage->specificRun(); 
 }
 
 void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Infos 
 {
-    string file = "stages.txt"; //Auslesen der Infos aus Textdatei
-    ifstream input(file); //Exception Handling? 
-    string buffer, toPass, stageID, stageName, description, question; //Strings for class Stages
-    while (input >> buffer) //liest Strings aus txt file  
-    {
-        if(buffer == "BEGIN_STAGE")
-        {
-            input >> stageID; 
-            input.ignore(); 
-            getline(input, stageName); 
-            getline(input, description); 
-            getline(input, question); 
-            input >> buffer; 
-            input >> toPass;
-            
-            stages[stageID] = new Stage(stageID, stageName, description, question, toPass); //new Stage with input content
-            if(stages[stageID]->toPass)
-            {
-                haveToPass[stageID] = stages[stageID]; //Neue Map mit allen Fächern, die man bestehen muss 
-            }
-        } else if (buffer == "STARTING_STAGE")
-        {
-            input >> buffer; 
-            currentStage = stages[buffer]; //STARTING_STAGE ist jetzt current state
+    stages["0"] = new Assessment(); 
+    stages["1"] = new BeginnSemester();
+    stages["2"] = new Mathe();
+    stages["3"] = new Programmieren();
+    stages["4"] = new Englisch();
+    stages["5"] = new Betriebssysteme();
+    stages["6"] = new Informatik();
+    stages["7"] = new Chef();
+    stages["8"] = new Auswertung();
 
-        } else if (buffer == "ENDING_STAGE")
+    for (auto const& x : stages)
+    {
+        if(x.second->toPass)
         {
-            input >> buffer; 
-            endingStage = stages[buffer]; //Markiert Ende
+            haveToPass[x.first] = x.second; 
         }
     }
+    currentStage = stages["0"]; 
+    endingStage = stages["8"]; 
 }
 
 bool Game::runToPass()
@@ -128,7 +132,8 @@ bool Game::runToPass()
                 cout << endl; 
             }
         }
-        if(currentStage->run()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
+        currentStage->run();
+        if(currentStage->specificRun()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
         {
             ++passCounter; 
         }; 
@@ -179,14 +184,13 @@ bool Game::prologue()
     string begin;
     cin >> begin;
     cin.ignore(); 
-    if (begin == "Ja")
+    cout << endl; 
+    if (begin == "Ja" || begin == "ja")
     {
-        //cout << "Ja";
         return true;
     }
-    else if (begin == "Nein")
+    else if (begin == "Nein" || begin == "nein")
     {
-        //cout << "Nein";
         return false;
     }
     else

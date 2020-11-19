@@ -12,8 +12,18 @@
 #include <algorithm>
 #include <thread>
 #include <chrono> //microsec
+#include <cstdlib> //Für zufällige Zahlen
+#include <ctime> //Zeit-Funktion
 
 using namespace std; 
+
+int trandom() {
+    int num;
+    srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
+    num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
+    return num;
+}
+
 
 void sleepFor(int i)
 {
