@@ -25,8 +25,8 @@ END_STAGE
 BEGIN_STAGE
 3
 C++
-Deine Programmierkuenste in C++ nehmen rasant zu. Weisst du die Loesung?  
-Hier kommt die ultrawichtige Frage! 
+Deine Programmierkuenste in C++ nehmen rasant zu.
+Was ist der Output von folgendem Code:
 PASS 1
 END_STAGE
 

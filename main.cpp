@@ -10,9 +10,9 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    //mathe();
+    programmieren();
     
-    Game game; //erstellt neue Game Instanz
+    /*Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
     if(game.prologue()) //Wenn user spielen will -> starte spiel
@@ -23,6 +23,6 @@ int main() {
     else 
     {
         cout << endl << "Schade! Dann bis zum naechsten Mal!";
-    }
+    }*/
     return 0;
 }

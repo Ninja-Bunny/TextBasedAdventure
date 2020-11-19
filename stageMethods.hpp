@@ -47,7 +47,7 @@ bool betriebssysteme()
         }
         else if (guess == num)
         {
-            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
+            cout << "Du hast die richtige Folie gelernt und die Klausur als einer der Einzigen im Kurs bestanden!" << endl << endl;
             passed = true; 
         }
         else 
@@ -150,6 +150,7 @@ bool mathe() {
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
     cout << endl << ">> ";
     cin >> z;
+    cin.ignore();
     if (z == ergebnis) 
     {
         slowPrinting("Super! Das Ergebnis lautet 1, genauso wie deine Note im Fach Mathematik.");
@@ -165,6 +166,38 @@ bool mathe() {
 }
 
 bool programmieren() {
+    cout << endl;
+    string firstLine = "| int a = 3;";
+    string lastLine = "| cout << ++b;";
+    hyphens(lastLine);
+    cout << "| int a = 3;" << endl;
+    cout << "| int b = 2;" << endl;
+    cout << "| b = a++;" << endl;
+    cout << "| cout << ++b;" << endl;
+    cout << endl;
+
+	const unsigned int x = 5, y = 5; 
+    char frame[x][y] = { '\0' }; 
+    for(unsigned int i = 0; i < x; ++i) 
+    { 
+		frame[i][0] = '#'; 
+        frame[i][y - 1] = '#'; 
+        for(unsigned int j = 0; j < y; ++j) 
+        { 
+			frame[0][j] = '#'; 
+            frame[y - 1][j] = '#'; 
+        }                                             
+    }
+	for(int i = 0; i < y; i++) 
+	{    
+		for(int j = 0; j < x; j++) 
+		{
+		      cout << frame[i][j]; 
+		
+		}
+                cout << endl; // NICHT-VERGESSEN!
+	}
+
     return true;
 }
 
