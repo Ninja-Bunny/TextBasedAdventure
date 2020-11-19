@@ -52,9 +52,10 @@ bool Stage::run()
     
     if (this->name == "Assessment Center")
     {
-        good = assessment();
+       return assessment();
         
-        /*if (good) //fixed :) 
+        /* bool good = assessment; 
+        if (good) //fixed :) 
         {
             cout << endl << "success" << endl;
         }
@@ -65,7 +66,7 @@ bool Stage::run()
         {
             cout << "error!";
         }*/
-        return good; 
+        //return good; 
     } 
     else if (this->name == "Beginn Semester")
     {
@@ -73,32 +74,32 @@ bool Stage::run()
     } 
     else if (this->name == "Mathe")
     {
-        return true;
+        return mathe();
     } 
     else if (this->name == "C++")
     {
-        return true;
+        return programmieren;
     } 
     else if (this->name == "Englisch")
     {
-        return true;
+        return englisch();
     } 
     else if (this->name == "Betriebssysteme")
     {
-        betriebssysteme(); 
-        return true;
+       return betriebssysteme(); 
+
     } 
     else if (this->name == "Informatik")
     {
-        return true;
+        return informatik();
     } 
     else if (this->name == "Mail vom Chef")
     {
-        return true;
+        return chef();
     } 
     else if (this->name == "Auswertung der Klausuren")
     {
-        return true;
+        return auswertung();
     } 
     else 
     {
