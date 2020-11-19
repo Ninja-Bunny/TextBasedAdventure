@@ -10,14 +10,12 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    //betriebssysteme(); //ich teste gerade noch
-    //cout << "test" << endl;
-    //Game game; 
-    //game.run(); 
-    Game game; //erstellt neue Game instanz
+    //mathe();
+    
+    Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
-    if(game.prologue()) //wenn user spielen will -> starte spiel
+    if(game.prologue()) //Wenn user spielen will -> starte spiel
     {
         clearScreen();
         game.run(); 

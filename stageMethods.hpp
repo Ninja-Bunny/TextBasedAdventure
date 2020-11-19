@@ -30,6 +30,9 @@ bool betriebssysteme()
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
             cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
+            cout << endl;
+            sleepFor(2000000);
             passed = false; 
         }
         else if (guess > num) 
@@ -134,7 +137,7 @@ bool assessment()
     }
     else
     {
-        slowPrinting("Du hast mindestens eine Aufgabe richtig beantwortet und kommst somit weiter!");
+        slowPrinting("Du hast mindestens eine Frage richtig beantwortet und kommst somit weiter!");
         sleepFor(2000000);
         return true; 
     }
@@ -142,7 +145,23 @@ bool assessment()
 }
 
 bool mathe() {
-    return true;
+    int z;
+    int ergebnis = (3*7)%5;
+    cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
+    cout << endl << ">> ";
+    cin >> z;
+    if (z == ergebnis) 
+    {
+        slowPrinting("Super! Das Ergebnis lautet 1, genauso wie deine Note im Fach Mathematik.");
+        cout << endl;
+        sleepFor(1000000);
+        return true;
+    }
+    else 
+    {   
+        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
+        return false;
+    }
 }
 
 bool programmieren() {
