@@ -30,6 +30,9 @@ bool betriebssysteme()
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
             cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
+            cout << endl;
+            sleepFor(2000000);
             passed = false; 
         }
         else if (guess > num) 

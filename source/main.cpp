@@ -9,16 +9,20 @@ using namespace std;
 
 int main() {
 
-    Game game; //erstellt neue Game instanz
+    /* TESTING */
+    //mathe();
+    
+    Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
-    if(game.prologue()) //wenn user spielen will -> starte spiel
+    if(game.prologue()) //Wenn user spielen will -> starte spiel
     {
+        clearScreen();
         game.run(); 
     }
     else 
     {
-        cout << "Schade! Dann bis zu nächsten Mal!";
+        cout << endl << "Schade! Dann bis zum naechsten Mal!";
     }
     return 0;
 }

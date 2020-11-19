@@ -17,8 +17,8 @@ END_STAGE
 BEGIN_STAGE
 2
 Mathe
-Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage loesen kannst? 
-Hier kommt die ultrawichtige Frage! 
+Du sitzt im Matheunterricht und bist am verzweifeln. 
+Ob du folgende Frage loesen kannst? 
 PASS 1
 END_STAGE
 

@@ -101,7 +101,7 @@ bool Game::runToPass()
         input = false; 
         
         while(!input) {
-            slowPrinting("Welches Fach möchtest du bestreiten?"); 
+            slowPrinting("Welches Fach moechtest du bestreiten?"); 
             cout << endl; 
             for(auto const& x : haveToPass)
             {
