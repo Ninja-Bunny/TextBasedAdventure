@@ -15,9 +15,10 @@ int trandom() {
     return num;
 }
 
-void betriebssysteme() 
+bool betriebssysteme() 
 {
     int num = trandom(); 
+    bool passed = false; 
     int guess, tries = 0;
     do {
         slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
@@ -29,24 +30,30 @@ void betriebssysteme()
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
             cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            passed = false; 
         }
         else if (guess > num) 
         {
             cout << "Die Zahl " << guess << " war leider zu hoch, versuche es nochmal: " << endl;
+            passed = false; 
         }
         else if (guess < num)
         {
             cout << "die Zahl " << guess << " war leider zu niedrig, versuche es nochmal: " << endl;
+            passed = false; 
         }
         else if (guess == num)
         {
             cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
+            passed = true; 
         }
         else 
         {
             cout << "Die Eingabe war ungültig." << endl;
+            passed = false; 
         }
     } while (guess != num && tries < 3); //Drei Versuche
+    return passed; 
 }
 
 bool assessment() 
@@ -69,6 +76,7 @@ bool assessment()
     int answer1;
     cin >> answer1;
     cin.ignore(); 
+    cout << endl; 
     switch (answer1) 
     {
         case 1:
@@ -98,6 +106,7 @@ bool assessment()
     int answer2;
     cin >> answer2;
     cin.ignore(); 
+    cout << endl; 
 
     switch (answer2)
     {

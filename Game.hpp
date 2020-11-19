@@ -6,6 +6,7 @@
 #include <fstream>
 #include <map>
 #include "Stage.hpp"
+#include "Helpful.hpp"
 
 using namespace std;
 
@@ -15,14 +16,16 @@ class Game
         Game(); //Konstruktor 
         //~Game(); //Destruktor -> brauchen wir den? 
         void run(); //wichtig, wird in main() aufgerufen
+        bool prologue(); //startet Prolog
     private: 
-        void setUpStage();
-        void runToPass(); 
-        void fail(bool b); 
-        Stage* currentStage; 
-        Stage* endingStage; 
-        map<string, Stage*> stages; 
-        map<string, Stage*> haveToPass; 
+        void setUpStage(); //liest stages aus txt ein
+        bool runToPass(); // lässt die Fächer laufen, die man bestehen muss 
+        void fail(bool b); //prüft ob man das Spiel verloren hat
+ 
+        Stage* currentStage; //Pointer, der auf die aktuelle Stage zeigt
+        Stage* endingStage; //Pointer, der auf die End Stage zeigt
+        map<string, Stage*> stages; //speichert alle stages
+        map<string, Stage*> haveToPass; //speichert die Stages, die man bestehen muss 
 }; 
 
 Game::Game() //Konstruktor Definition 
@@ -39,7 +42,7 @@ void Game::run() //run() soll game starten
         if(stages[currentStage->getNext()]->toPass) //Wenn die nächste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
             fail(currentStage->run()); 
-            runToPass();    //special Teil folgt, da man hier in einem Loop ist 
+            fail(runToPass());    //special Teil folgt, da man hier in einem Loop ist 
         }
         fail(currentStage->run());
         currentStage=stages[currentStage->getNext()];
@@ -51,7 +54,7 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
     string file = "stages.txt"; //Auslesen der Infos aus Textdatei
     ifstream input(file); //Exception Handling? 
     string buffer, toPass, stageID, stageName, description, question; //Strings for class Stages
-    while (input >> buffer)
+    while (input >> buffer) //liest Strings aus txt file  
     {
         if(buffer == "BEGIN_STAGE")
         {
@@ -81,14 +84,15 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
     }
 }
 
-void Game::runToPass()
+bool Game::runToPass()
 {   
     int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
+    int passCounter = 0; //mitzählen, wie viele man bestanden hat 
     string userInput = ""; 
     string sName = ""; 
     bool input; 
 
-    while(!haveToPass.empty()) 
+    while(!haveToPass.empty()) //solange die Liste nicht leer ist, in der die Fächer sind
     {
         input = false; 
         
@@ -101,11 +105,11 @@ void Game::runToPass()
                 slowPrinting(x.second->getName()); 
             }
             cout << endl << ">> "; 
-            //ignoriert alle Eingaben, die davor evtl. gemacht worden sind
+
             getline(cin, userInput); 
 
             cout << endl; 
-            transform(userInput.begin(), userInput.end(), userInput.begin(), ::tolower);
+            transform(userInput.begin(), userInput.end(), userInput.begin(), ::tolower); //alles klein transformieren zum vergleich
             
             for(auto const& x : haveToPass) 
             {
@@ -124,23 +128,71 @@ void Game::runToPass()
                 cout << endl; 
             }
         }
-        currentStage->run(); 
+        if(currentStage->run()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
+        {
+            ++passCounter; 
+        }; 
         haveToPass.erase(currentStage->getID()); //löscht Stage from have to Pass
         ++stageCounter; 
 
     }
-    currentStage = stages[to_string(stageCounter+1)]; 
-
+    currentStage = stages[to_string(stageCounter+1)]; //setzt die aktuelle stage auf die, nach den Fächern
+    if(passCounter>2) //wenn man mehr als 2 Fächer bestanden hat, darf man weiterspielen
+    {
+        return true; 
+    } 
+    else
+    {
+        return false; 
+    }
+    
 }
 
 void Game::fail(bool b)
 {
-    if(!b)
+    if(!b) //wenn verloren 
     {
         clearScreen(); 
         slowPrinting("YOU FAILED"); 
         slowPrinting("Diesmal hat es nicht gereicht. WIr sehen uns beim nächsten Versuch!"); 
         exit(0); 
+    }
+}
+
+bool Game::prologue() 
+{
+    slowPrinting("Denkst du wirklich du bist der Herausforderung eines dualen Studiums im Fach IT-Security gewachsen?");
+    slowPrinting("Nunja ");
+    cout << endl; 
+    for (int i = 0; i < 3; i++) 
+    {
+        cout << "." << endl; ;
+        sleepFor(500000);
+    }
+    cout << endl;
+    slowPrinting("Wir werden sehen!");
+    sleepFor(800000); //kurze Pause um das Gelesene zu verarbeiten 
+    clearScreen();
+    slowPrinting("Willst du die Simulation starten?");
+    slowPrinting("Tippe 'Ja' um fortzufahren und 'Nein' um abzubrechen: ");
+    cout << endl << ">> ";
+    string begin;
+    cin >> begin;
+    cin.ignore(); 
+    if (begin == "Ja")
+    {
+        //cout << "Ja";
+        return true;
+    }
+    else if (begin == "Nein")
+    {
+        //cout << "Nein";
+        return false;
+    }
+    else
+    {
+        //cout << "Nochmal";
+        return false;
     }
 }
 

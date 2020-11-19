@@ -5,31 +5,25 @@ using namespace std;
 #include "Game.hpp"
 #include "Helpful.hpp"
 #include "stageMethods.hpp"
-#include "prologue.hpp"
+
 
 int main() {
 
-    clearScreen();
     /* TESTING */
     //betriebssysteme(); //ich teste gerade noch
     //cout << "test" << endl;
     //Game game; 
     //game.run(); 
-    bool start = prologue(); 
+    Game game; //erstellt neue Game instanz
     clearScreen(); 
 
-    if(start)
+    if(game.prologue()) //wenn user spielen will -> starte spiel
     {
-        Game game; 
         game.run(); 
-    }
-    else if (!start) {
-        cout << "Schade!";
     }
     else 
     {
-        cout << "Schade!";
+        cout << "Schade! Dann bis zu nächsten Mal!";
     }
-
     return 0;
 }

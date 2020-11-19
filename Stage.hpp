@@ -69,39 +69,41 @@ bool Stage::run()
     } 
     else if (this->name == "Beginn Semester")
     {
-
+        return true;
     } 
     else if (this->name == "Mathe")
     {
-        
+        return true;
     } 
     else if (this->name == "C++")
     {
-        
+        return true;
     } 
     else if (this->name == "Englisch")
     {
-        
+        return true;
     } 
     else if (this->name == "Betriebssysteme")
     {
         betriebssysteme(); 
+        return true;
     } 
     else if (this->name == "Informatik")
     {
-        
+        return true;
     } 
     else if (this->name == "Mail vom Chef")
     {
-        
+        return true;
     } 
     else if (this->name == "Auswertung der Klausuren")
     {
-
+        return true;
     } 
     else 
     {
         cout << "error" << endl;  
+        return false; 
     }
 }
 string Stage::getID()

@@ -15,11 +15,16 @@
 
 using namespace std; 
 
+void sleepFor(int i)
+{
+    this_thread::sleep_for(chrono::microseconds(i));
+}
+
 void slowPrinting(string s)
 {
     for (int i = 0; i < s.size(); i++) { 
         cout << s[i] << flush; //Ausgabe Buchstabe per Buchstabe 
-        this_thread::sleep_for(chrono::microseconds((s[i] % 8)*8000+20000));  //Zufällige Schlafenzeit, damit es natürlicher wirkt
+        sleepFor((s[i] % 8)*8000+20000);  //Zufällige Schlafenzeit, damit es natürlicher wirkt
     }
     cout << endl; 
 
@@ -43,9 +48,6 @@ void hyphens(string title)
     cout << endl;
 }
 
-void sleepFor(int i)
-{
-    this_thread::sleep_for(chrono::microseconds(i));
-}
+
 
 #endif
