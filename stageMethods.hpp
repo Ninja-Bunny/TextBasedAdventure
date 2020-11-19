@@ -77,15 +77,15 @@ bool assessment()
     cin >> answer1;
     cin.ignore(); 
     cout << endl; 
-    switch (answer1) 
+    switch (answer1) //switch case hier am Sinnvollsten
     {
         case 1:
-            slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es wie eine Zurückweisung wirkt.");
+            slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es wie eine Zurueckweisung wirkt.");
             cout << endl; 
             a1 = false; //hier bist du immer direkt aus der ganzen funktion rausgeflogen, wegen dem return statement
             break;
         case 2:
-            slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es unangebracht ist Sonderwuensche zu äussern.");
+            slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es unangebracht ist Sonderwuensche zu aeussern.");
             cout << endl; 
             a1 = false;
             break;
@@ -94,12 +94,14 @@ bool assessment()
             a1 = true;
             break;
         default:
+            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
             a1 = false;
     } 
 
-    cout << "2. Frage: 'Wo hat die Deutsche Telekom AG ihren Hauptsitz?'" << endl;
-    cout << endl << "1) München" << endl;
-    cout << endl << "2) Bonn" << endl;
+    cout << endl << "2. Frage: 'Wo hat die Deutsche Telekom AG ihren Hauptsitz?'" << endl;
+    slowPrinting("Was antwortest du? (Tippe 1, 2 oder 3 ein)");
+    cout << endl << "1) Muenchen";
+    cout << endl << "2) Bonn";
     cout << endl << "3) Frankfurt" << endl;
     cout << endl << ">> ";
 
@@ -111,7 +113,7 @@ bool assessment()
     switch (answer2)
     {
         case 1:
-            slowPrinting("Leider falsch, Bonn wäre die richtige Antwort gewesen");
+            slowPrinting("Leider falsch, Bonn waere die richtige Antwort gewesen");
             a2 = false;
             break;
         case 2:
@@ -119,10 +121,11 @@ bool assessment()
             a2 = true;
             break;
         case 3:
-            slowPrinting("Leider falsch, Bonn wäre die richtige Antwort gewesen");
+            slowPrinting("Leider falsch, Bonn waere die richtige Antwort gewesen");
             a2 = false;
             break;
         default:
+            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
             a2 = false;
     }
     if(!a1 && !a2) //nur wenn beide Antworten falsch waren fliegt man raus 
@@ -131,6 +134,8 @@ bool assessment()
     }
     else
     {
+        slowPrinting("Du hast mindestens eine Frage richtig beantwortet und kommst somit weiter!");
+        sleepFor(2000000);
         return true; 
     }
     
