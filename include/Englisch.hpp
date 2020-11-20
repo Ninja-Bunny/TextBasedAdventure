@@ -49,7 +49,7 @@ bool Englisch::specificRun()
     cin.ignore(); 
     //clearScreen();
     //slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
-    cout << endl << ">> ";
+    //cout << endl << ">> ";
     //cin >> answer;
     cin.ignore();
     if (userInput && answer == "4") 
