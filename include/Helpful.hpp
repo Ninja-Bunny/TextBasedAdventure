@@ -94,7 +94,7 @@ void timer(int seconds)
     }
 }
 
-void gotoxy(int x, int y)
+/*void gotoxy(int x, int y)
 {
 	COORD d;
 	d.X = x;
@@ -113,6 +113,6 @@ void load()
 		cout << a;
         if ()
 	}
-}
+}*/
 
 #endif
