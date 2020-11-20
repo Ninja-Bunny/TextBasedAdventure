@@ -15,7 +15,7 @@ int main() {
     //englisch(); 
 
     //mathe(); 
-    cout << termcolor::red; 
+ 
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
@@ -25,7 +25,8 @@ int main() {
         game.run(); 
     }
     else 
-    {
+    {   
+        cout << termcolor::white; 
         cout << endl << "Schade! Dann bis zum naechsten Mal!";
     }
     

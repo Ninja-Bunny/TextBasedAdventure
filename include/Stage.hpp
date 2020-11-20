@@ -1,7 +1,7 @@
 #ifndef STAGE_HPP
 #define STAGE_HPP
 
-
+#pragma once
 #include <iostream>
 #include <string> 
 //#include "stageMethods.hpp"
@@ -31,50 +31,6 @@ class Stage
         string description2; //Question to Answer
         bool passed; 
 }; 
-
-Stage::Stage()
-{
-    //do nothing; 
-}
-
-void Stage::run()
-{
-    clearScreen();
-    bool good = false; 
-    int sID = stoi(this->id); 
-    cout << endl; 
-    hyphens(name); //Trennstriche
-    slowPrinting("|| " + name + " ||"); //Überschrift bzw. Name der Stage
-    hyphens(name);
-    slowPrinting(description); 
-    slowPrinting(description2); 
-    cout << endl; 
-
-}
-string Stage::getID()
-{
-    return id; 
-}
-
-string Stage::getName()
-{
-    return name; 
-} 
-string Stage::getDescription()
-{
-    return description; 
-} 
-string Stage::getDescription2()
-{
-    return description2; 
-}
-string Stage::getNext()
-{
-    int i = stoi(id);
-    ++i;
-    string s = to_string(i);
-    return s;
-}
 
 #endif
 
