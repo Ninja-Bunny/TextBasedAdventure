@@ -5,6 +5,7 @@
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
 #include "../include/Helpful.hpp"
+#include "../include/termcolor.hpp"
 
 using namespace std;
 
