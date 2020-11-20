@@ -38,19 +38,13 @@ bool Englisch::specificRun()
     cout << endl << "5) necassary" << endl << endl;;
     sleepFor(2000000);
     slowPrinting("You have 10 seconds from NOW!");
-    slowPrinting("Remember the number you choose!");
+    slowPrinting("Enter whenever you feel ready.");
     cout << endl;
     cin >> answer;
-    //cout << endl << ">> ";
-    if(timer(10) && !answer.empty()) //Wenn timer done und antwort eingegeben
-    {
-        userInput = true; 
-    }
-    cin.ignore(); 
+    cout << endl; 
     //clearScreen();
-    //slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
-    //cout << endl << ">> ";
-    //cin >> answer;
+    slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
+    cout << endl << ">> ";
     cin.ignore();
     if (userInput && answer == "4") 
     {

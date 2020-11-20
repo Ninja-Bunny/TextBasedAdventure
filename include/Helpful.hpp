@@ -67,19 +67,17 @@ void stars(string title)
     cout << endl;
 }
 
-bool timer(int seconds) 
+void timer(int seconds) 
 {
     for (int i = seconds; i > 0; i--) 
     {
-        cout << i << ", ";
+        cout << i << ", " << flush;
         sleepFor(1000000); //=1 Sekunde in Mikrosekunden
         //clearScreen();
         if (i == 1) {
             cout << "0!";
-            return true; 
         }
     }
-    return false; 
 }
 
 #endif

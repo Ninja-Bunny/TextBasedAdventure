@@ -202,7 +202,6 @@ bool programmieren() {
 
 bool englisch() {
     string answer;
-    bool userInput = false; 
     cout << "What is the correct english word for 'notwendig'?" << endl;
     sleepFor(1000000);
     cout << endl << "1) neccesary";
@@ -212,21 +211,17 @@ bool englisch() {
     cout << endl << "5) necassary" << endl << endl;;
     sleepFor(2000000);
     slowPrinting("You have 10 seconds from NOW!");
-    slowPrinting("Remember the number you choose!");
+    slowPrinting("Write whenever you feel ready. Don't forget to press enter.");
+    timer(10); 
     cout << endl;
-    cin >> answer;
-    //cout << endl << ">> ";
-    if(timer(10) && !answer.empty()) //Wenn timer done und antwort eingegeben
-    {
-        userInput = true; 
-    } 
-    cin.ignore(); 
+    cout << endl; 
     //clearScreen();
     //slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
     cout << endl << ">> ";
-    //cin >> answer;
+    cin >> answer;
+    cout << answer << endl; 
     //cin.ignore();
-    if (userInput && answer == "4") 
+    if (answer == "4") 
     {
         cout << endl;
         slowPrinting("Well done!");
@@ -234,7 +229,6 @@ bool englisch() {
         cout << endl;
         slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
         cout << endl << "Press Enter to continue!";
-        cin >> answer; 
         cin.ignore(); 
         return true;
     }
@@ -245,6 +239,7 @@ bool englisch() {
         cout << endl;
         slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
         cout << endl << "Press Enter to continue!";
+        cin.ignore(); 
         return false;
     }
 }
