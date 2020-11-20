@@ -10,8 +10,9 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    //informatik();
-    
+	load();
+	cout << endl << endl << endl << endl << endl << endl << endl;
+    /*
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
@@ -24,6 +25,6 @@ int main() {
     {
         cout << endl << "Schade! Dann bis zum naechsten Mal!";
     }
-    
+    */
     return 0;
 }

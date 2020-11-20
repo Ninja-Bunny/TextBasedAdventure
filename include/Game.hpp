@@ -159,7 +159,7 @@ void Game::fail(bool b)
     {
         clearScreen(); 
         slowPrinting("YOU FAILED"); 
-        slowPrinting("Diesmal hat es nicht gereicht. WIr sehen uns beim nächsten Versuch!"); 
+        slowPrinting("Diesmal hat es nicht gereicht. Wir sehen uns beim nächsten Versuch!"); 
         exit(0); 
     }
 }

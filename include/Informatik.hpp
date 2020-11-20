@@ -59,5 +59,4 @@ bool Informatik::specificRun()
     }
 }
 
-
 #endif
