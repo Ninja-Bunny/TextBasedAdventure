@@ -10,7 +10,6 @@ using namespace std;
 int main() {
 
     /* TESTING */
-	load();
     /*
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
