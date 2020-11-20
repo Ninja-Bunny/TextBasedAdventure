@@ -227,7 +227,6 @@ bool englisch() {
         cout << endl;
         slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
         cout << endl << "Press Enter to continue!";
-        cin;
         return true;
     }
     else if (answer != "4")
@@ -237,7 +236,6 @@ bool englisch() {
         cout << endl;
         slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
         cout << endl << "Press Enter to continue!";
-        cin.ignore();
         return false;
     }
     else 

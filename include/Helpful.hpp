@@ -67,7 +67,7 @@ void stars(string title)
     cout << endl;
 }
 
-void timer(int seconds) 
+bool timer(int seconds) 
 {
     for (int i = seconds; i > 0; i--) 
     {
@@ -76,8 +76,10 @@ void timer(int seconds)
         //clearScreen();
         if (i == 1) {
             cout << "0!";
+            return true; 
         }
     }
+    return false; 
 }
 
 #endif

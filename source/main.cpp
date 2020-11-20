@@ -11,7 +11,7 @@ int main() {
 
     /* TESTING */
     //informatik();
-    
+    englisch(); 
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
 

@@ -29,7 +29,7 @@ bool Informatik::specificRun()
 {
     string logic = "a || !a";
     string zahl;
-    slowPrinting("Frage: Wie kann die folgende Aussage in der Aussagenlogik noch bezeichnet werden?");
+    slowPrinting("Wie kann die folgende Aussage in der Aussagenlogik noch bezeichnet werden?");
     slowPrinting("(Tippe 1, 2, 3, 4 oder 5 ein!)");
     cout << endl;
     slowPrinting("a || !a");
@@ -48,7 +48,7 @@ bool Informatik::specificRun()
         slowPrinting("Achja ...");
         sleepFor(2000000);
         slowPrinting("Alle genannten Antworten waren uebrigens richtig. Hoffentlich hast du dir nicht den Kopf zerbrochen!");
-        cout << endl;
+        cout << endl; 
         return true;
     }
     else 
