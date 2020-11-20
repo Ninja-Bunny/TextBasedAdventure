@@ -11,7 +11,6 @@ int main() {
 
     /* TESTING */
 	load();
-	cout << endl << endl << endl << endl << endl << endl << endl;
     /*
     Game game; //erstellt neue Game Instanz
     clearScreen(); 

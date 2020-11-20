@@ -90,13 +90,14 @@ void gotoxy(int x, int y)
 void load()
 {
 	char a = 219;
-	gotoxy(36, 14);
+	gotoxy(36, 14); //Verschiebt den Ladebalken
 	cout << "Klausurergebnisse werden geladen..."<< endl;
 	gotoxy(30,16);
-	for(int r =1; r<=20; r++)
+	for(int r = 1; r <= 30; r++) //Länge des Balkens
 	{
-		for(int q=0; q<=100000000; q++);
+		for (int q = 0; q <= 100000000; q++); //Geschwindigkeit des Fortschritts
 		cout << a;
+        if ()
 	}
 }
 
