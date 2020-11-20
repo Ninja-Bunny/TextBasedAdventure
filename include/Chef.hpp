@@ -8,6 +8,7 @@
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime>
 #include "../include/Helpful.hpp"
+#include "../include/termcolor.hpp"
 
 class Chef : public Stage{
     public: 

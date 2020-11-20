@@ -9,6 +9,7 @@
 #include <ctime>
 #include "../include/Helpful.hpp"
 #include "../include/Stage.hpp"
+#include "../include/termcolor.hpp"
 
 class Assessment : public Stage{
     public: 

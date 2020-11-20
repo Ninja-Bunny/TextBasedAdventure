@@ -16,6 +16,7 @@
 #include "../include/Programmieren.hpp"
 #include "../include/Auswertung.hpp"
 #include "../include/Helpful.hpp"
+#include "../include/termcolor.hpp"
 
 using namespace std;
 

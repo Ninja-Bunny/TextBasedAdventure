@@ -6,6 +6,7 @@
 #include <string> 
 //#include "stageMethods.hpp"
 #include "../include/Helpful.hpp"
+#include "../include/termcolor.hpp"
 
 
 using namespace std; 
