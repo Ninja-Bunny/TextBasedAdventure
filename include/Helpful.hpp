@@ -7,6 +7,7 @@
     #include <unistd.h>
 #endif
 
+#pragma once
 #include <string>
 #include <iostream>
 #include <algorithm>
@@ -14,10 +15,12 @@
 #include <chrono> //microsec
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
+#include "../include/termcolor.hpp"
 
 using namespace std; 
 
-int trandom() {
+
+int inline trandom() {
     int num;
     srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
     num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
@@ -25,12 +28,12 @@ int trandom() {
 }
 
 
-void sleepFor(int i)
+void inline sleepFor(int i)
 {
     this_thread::sleep_for(chrono::microseconds(i));
 }
 
-void slowPrinting(string s)
+void inline slowPrinting(string s)
 {
     for (int i = 0; i < s.size(); i++) { 
         cout << s[i] << flush; //Ausgabe Buchstabe per Buchstabe 
@@ -40,7 +43,7 @@ void slowPrinting(string s)
 
 }
 
-void clearScreen()
+void inline clearScreen()
 {
     #ifdef _WIN32
         system("CLS");
@@ -49,7 +52,7 @@ void clearScreen()
     #endif
 }
 
-void hyphens(string title)
+void inline hyphens(string title)
 {
     for(int i = 0; i < ("|| " + title + " ||").size(); i++) //Trennstriche in Länge der Überschrift
     {
@@ -58,7 +61,7 @@ void hyphens(string title)
     cout << endl;
 }
 
-void stars(string title)
+void inline stars(string title)
 {
     for(int i = 0; i < (title.size() +2); i++) //Sterne in Länge der Überschrift
     {
@@ -67,11 +70,11 @@ void stars(string title)
     cout << endl;
 }
 
-void timer(int seconds) 
+void inline timer(int seconds) 
 {
     for (int i = seconds; i > 0; i--) 
     {
-        cout << i << ", ";
+        cout << i << ", " << flush;
         sleepFor(1000000); //=1 Sekunde in Mikrosekunden
         //clearScreen();
         if (i == 1) {
@@ -79,5 +82,27 @@ void timer(int seconds)
         }
     }
 }
+
+/*void inline gotoxy(int x, int y)
+{
+	COORD d;
+	d.X = x;
+	d.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), d);
+}*/
+
+/*void inline load()
+{
+	char a = 219;
+	gotoxy(36, 14); //Verschiebt den Ladebalken
+	cout << "Klausurergebnisse werden geladen..."<< endl;
+	gotoxy(30,16);
+	for(int r = 1; r <= 30; r++) //Länge des Balkens
+	{
+		for (int q = 0; q <= 100000000; q++); //Geschwindigkeit des Fortschritts
+		cout << a;
+        if ()
+	}
+}*/
 
 #endif

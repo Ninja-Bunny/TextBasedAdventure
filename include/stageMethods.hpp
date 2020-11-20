@@ -5,6 +5,7 @@
 #include <cstdlib> //Für zufällige Zahlen
 #include <ctime> //Zeit-Funktion
 #include "../include/Helpful.hpp"
+#include "../include/termcolor.hpp"
 
 using namespace std;
 
@@ -211,14 +212,16 @@ bool englisch() {
     cout << endl << "5) necassary" << endl << endl;;
     sleepFor(2000000);
     slowPrinting("You have 10 seconds from NOW!");
-    slowPrinting("Remember the number you choose!");
+    slowPrinting("Write whenever you feel ready. Don't forget to press enter.");
+    timer(10); 
     cout << endl;
-    timer(10);
-    clearScreen();
-    slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
+    cout << endl; 
+    //clearScreen();
+    //slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
     cout << endl << ">> ";
     cin >> answer;
-    cin.ignore();
+    cout << answer << endl; 
+    //cin.ignore();
     if (answer == "4") 
     {
         cout << endl;
