@@ -5,6 +5,7 @@ using namespace std;
 #include "../include/Game.hpp"
 #include "../include/Helpful.hpp"
 #include "../include/stageMethods.hpp"
+#include "../include/termcolor.hpp"
 
 
 int main() {
@@ -12,7 +13,9 @@ int main() {
     /* TESTING */
     //informatik();
     //englisch(); 
-    mathe(); 
+
+    //mathe(); 
+    cout << termcolor::red; 
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
