@@ -1,5 +1,5 @@
-#ifndef BEGINSEMESTER_HPP
-#define BEGINSEMESTER_HPP
+#ifndef BEGINNSEMESTER_HPP
+#define BEGINNSEMESTER_HPP
 
 #include "../include/Stage.hpp"
 #include <iostream>
@@ -9,23 +9,23 @@
 #include <ctime>
 #include "../include/Helpful.hpp"
 
-class BeginSemester : public Stage{
+class BeginnSemester : public Stage{
     public: 
-        BeginSemester(); 
+        BeginnSemester(); 
         bool specificRun(); 
 
 }; 
 
-BeginSemester::BeginSemester()
+BeginnSemester::BeginnSemester()
 {
     this -> id = "1";
-    this->name = "Begin Semester"; 
+    this->name = "Beginn Semester"; 
     this->description = "Du hast es geschafft und es geht direkt weiter in die Hochschule.";
     this->description2 = "Dein Stundenplan ist vollgepackt mit vielen wichtigen Faechern.";
     this->toPass = false;  
 }
 
-bool BeginSemester::specificRun()
+bool BeginnSemester::specificRun()
 {
     return true;
 }

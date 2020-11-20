@@ -7,7 +7,7 @@
 #include <map>
 #include "../include/Stage.hpp"
 #include "../include/Assessment.hpp"
-#include "../include/BeginSemester.hpp"
+#include "../include/BeginnSemester.hpp"
 #include "../include/Betriebssysteme.hpp"
 #include "../include/Chef.hpp"
 #include "../include/Englisch.hpp"
@@ -68,7 +68,7 @@ void Game::run() //run() soll game starten
 void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Infos 
 {
     stages["0"] = new Assessment(); 
-    stages["1"] = new BeginSemester();
+    stages["1"] = new BeginnSemester();
     stages["2"] = new Mathe();
     stages["3"] = new Programmieren();
     stages["4"] = new Englisch();

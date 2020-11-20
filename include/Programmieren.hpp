@@ -42,9 +42,9 @@ bool Programmieren::specificRun()
     cin.ignore();
     if (z == ergebnis)
     {
+        cout << endl;
         slowPrinting("Das ist korrekt!");
         cout << endl;
-        sleepFor(1000000);
         return true;
     }
     else 
@@ -54,8 +54,7 @@ bool Programmieren::specificRun()
         cout << "Prefix increments the value, and then proceeds with the expression." << endl;
         cout << "Postfix evaluates the expression and then performs the incrementing." << endl << endl;
         slowPrinting("Wenn du fertig bist, druecke einfach Enter!");
-        sleepFor(1000000);
-        cin;
+        cin.ignore();
         return false;
     }
 }

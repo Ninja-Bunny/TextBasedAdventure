@@ -10,7 +10,7 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    //programmieren();
+    //informatik();
     
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
