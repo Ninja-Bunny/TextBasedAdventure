@@ -32,7 +32,8 @@ class Game
         void setUpStage(); //liest stages aus txt ein
         bool runToPass(); // lässt die Fächer laufen, die man bestehen muss 
         void fail(bool b); //prüft ob man das Spiel verloren hat
- 
+
+        int passCounter; 
         Stage* currentStage; //Pointer, der auf die aktuelle Stage zeigt
         Stage* endingStage; //Pointer, der auf die End Stage zeigt
         map<string, Stage*> stages; //speichert alle stages

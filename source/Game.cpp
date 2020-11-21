@@ -7,6 +7,7 @@ Game::Game() //Konstruktor Definition
 {
     currentStage = nullptr; 
     endingStage = nullptr;
+    passCounter = 0;
     
     setUpStage(); 
 }
@@ -57,7 +58,7 @@ bool Game::runToPass()
 {   
     
     int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
-    int passCounter = 0; //mitzählen, wie viele man bestanden hat 
+     //mitzählen, wie viele man bestanden hat 
     string userInput = ""; 
     string sName = ""; 
     bool input; 
