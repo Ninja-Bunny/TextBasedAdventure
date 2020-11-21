@@ -11,7 +11,8 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    auswertung();
+    //auswertung();
+    chef(); 
     /*
     Game game; //erstellt neue Game Instanz
     clearScreen(); 

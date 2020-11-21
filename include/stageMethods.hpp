@@ -16,7 +16,7 @@ using namespace std;
     return num;
 }*/
 
-bool betriebssysteme() 
+bool inline betriebssysteme() 
 {
     int num = trandom(); 
     bool passed = false; 
@@ -60,7 +60,7 @@ bool betriebssysteme()
     return passed; 
 }
 
-bool assessment() 
+bool inline assessment() 
 {
     bool a1 = false; //antwort 1
     bool a2 = false; //antwort 2
@@ -145,7 +145,7 @@ bool assessment()
     
 }
 
-bool mathe() {
+bool inline mathe() {
     int z;
     int ergebnis = (3*7)%5;
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
@@ -166,7 +166,7 @@ bool mathe() {
     }
 }
 
-bool programmieren() {
+bool inline programmieren() {
     int a = 3, b = 2, z;
     b = a++;
     int ergebnis = ++b;
@@ -201,7 +201,7 @@ bool programmieren() {
     }
 }
 
-bool englisch() {
+bool inline englisch() {
     string answer;
     cout << "What is the correct english word for 'notwendig'?" << endl;
     sleepFor(1000000);
@@ -245,7 +245,7 @@ bool englisch() {
     }
 }
 
-bool informatik() {
+bool inline informatik() {
     string logic = "a || !a";
     string zahl;
     slowPrinting("Wie kann die folgende Aussage in der Aussagenlogik noch bezeichnet werden?");
@@ -277,7 +277,7 @@ bool informatik() {
     }
 }
 
-bool chef() {
+bool inline chef() {
     string antwort;
     cout << termcolor::magenta;
     cout << endl << "1) Das Geld unverzueglich an den Partner ueberweisen." << endl;
@@ -300,7 +300,7 @@ bool chef() {
     }
 }
 
-bool auswertung() {
+bool inline auswertung() {
     return true;
 }
 

@@ -1,4 +1,4 @@
-#/bin/bash\
-g++ -g source/main.cpp source/Assessment.cpp source/Auswertung.cpp source/BeginnSemester.cpp source/Betriebssysteme.cpp source/Chef.cpp source/Englisch.cpp source/Game.cpp source/Informatik.cpp source/Mathe.cpp source/Programmieren.cpp source/Stage.cpp -o adventure.exe -std=c++17\
+#/bin/bash
+clang++ -g source/main.cpp source/Assessment.cpp source/Auswertung.cpp source/BeginnSemester.cpp source/Betriebssysteme.cpp source/Chef.cpp source/Englisch.cpp source/Game.cpp source/Informatik.cpp source/Mathe.cpp source/Programmieren.cpp source/Stage.cpp -o adventure -std=c++17
 
-./adventure.exe
+./adventure
