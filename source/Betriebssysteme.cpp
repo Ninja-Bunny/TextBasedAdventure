@@ -13,7 +13,7 @@ Betriebssysteme::Betriebssysteme()
 
 bool Betriebssysteme::specificRun()
 {
-    cout << termcolor::green;
+    cout << termcolor::white;
     int num = trandom(); 
     bool passed = false; 
     int guess, tries = 0;
@@ -26,7 +26,7 @@ bool Betriebssysteme::specificRun()
 
         if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
         {
-            cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
             cout << endl;
             sleepFor(2000000);

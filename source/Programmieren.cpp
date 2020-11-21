@@ -11,7 +11,7 @@ Programmieren::Programmieren()
 }
 bool Programmieren::specificRun()
 {
-    cout << termcolor::cyan;
+    cout << termcolor::white;
     int a = 3, b = 2, z;
     b = a++;
     int ergebnis = ++b;
@@ -35,7 +35,8 @@ bool Programmieren::specificRun()
     }
     else
     {
-        slowPrinting("Leider falsch, schaue dir die folgende Erklaerung aus der Vorlesung nochmal an:");
+        slowPrinting("Leider falsch, 4 wäre die richtige Lösung gewesen!");
+        slowPrinting("Schaue dir die folgende Erklaerung aus der Vorlesung nochmal an:");
         cout << endl;
         cout << "Prefix increments the value, and then proceeds with the expression." << endl;
         cout << "Postfix evaluates the expression and then performs the incrementing." << endl << endl;

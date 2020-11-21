@@ -65,6 +65,7 @@ bool Game::runToPass()
         input = false; 
         
         while(!input) {
+            cout << termcolor::cyan;
             slowPrinting("Welches Fach moechtest du bestreiten?"); 
             cout << endl; 
             for(auto const& x : haveToPass)
@@ -92,7 +93,7 @@ bool Game::runToPass()
             }
             if(!input) 
             {
-                slowPrinting("Keine Übereinstimmung mit dem Stundenplan. Bitte versuche es erneut."); 
+                slowPrinting("Keine Uebereinstimmung mit dem Stundenplan. Bitte versuche es erneut."); 
                 cout << endl; 
             }
         }
@@ -145,7 +146,7 @@ bool Game::prologue()
     slowPrinting("Wir werden sehen!");
     sleepFor(800000); //kurze Pause um das Gelesene zu verarbeiten 
     clearScreen();
-    cout << termcolor::red;
+    cout << termcolor::white;
     slowPrinting("Willst du die Simulation starten?");
     slowPrinting("Tippe 'Ja' um fortzufahren und 'Nein' um abzubrechen: ");
     cout << endl << ">> ";

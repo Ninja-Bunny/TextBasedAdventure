@@ -12,7 +12,7 @@ Informatik::Informatik()
 
 bool Informatik::specificRun()
 {
-    cout << termcolor::yellow;
+    cout << termcolor::white;
     string logic = "a || !a";
     string zahl;
     slowPrinting("Wie kann die folgende Aussage in der Aussagenlogik noch bezeichnet werden?");
@@ -34,7 +34,9 @@ bool Informatik::specificRun()
         slowPrinting("Achja ...");
         sleepFor(2000000);
         slowPrinting("Alle genannten Antworten waren uebrigens richtig. Hoffentlich hast du dir nicht den Kopf zerbrochen!");
-        cout << endl; 
+        cout << endl << "Drücke Enter um fortzufahren." << endl << endl << ">> "; 
+        cin;
+        cin.ignore();
         return true;
     }
     else 

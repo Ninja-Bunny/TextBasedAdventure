@@ -15,6 +15,7 @@ bool Englisch::specificRun()
     cout << termcolor::blue;
     string answer;
     cout << "What is the correct english word for 'notwendig'?" << endl;
+    slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
     sleepFor(1000000);
     cout << endl << "1) neccesary";
     cout << endl << "2) neccessary";
@@ -27,8 +28,7 @@ bool Englisch::specificRun()
     timer(10); 
     cout << endl;
     cout << endl; 
-    //clearScreen();
-    //slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
+    clearScreen();
     cout << endl << ">> ";
     cin >> answer;
     cout << answer << endl; 
@@ -40,7 +40,8 @@ bool Englisch::specificRun()
         slowPrinting("Here is a useful sentence for you:");
         cout << endl;
         slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
-        cout << endl << "Press Enter to continue!";
+        cout << endl << "Press Enter to continue!" << endl << ">>";
+        cin;
         cin.ignore(); 
         return true;
     }
