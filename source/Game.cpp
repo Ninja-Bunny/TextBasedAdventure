@@ -144,11 +144,11 @@ bool Game::prologue()
     for (int i = 0; i < 3; i++) 
     {
         cout << "." << endl; ;
-        sleepFor(500000);
+        sleepFor(600000);
     }
     cout << endl;
     slowPrinting("Wir werden sehen!");
-    sleepFor(800000); //kurze Pause um das Gelesene zu verarbeiten 
+    sleepFor(1000000); //kurze Pause um das Gelesene zu verarbeiten 
     clearScreen();
     cout << termcolor::white;
     slowPrinting("Willst du die Simulation starten?");
@@ -164,6 +164,8 @@ bool Game::prologue()
     }
     else
     {
+        slowPrinting("Komme einfach wieder, wenn du bereit bist.");
+        sleepFor(2000000);
         return false;
     }
 }

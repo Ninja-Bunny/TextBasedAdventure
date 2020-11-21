@@ -34,7 +34,7 @@ bool Informatik::specificRun()
         slowPrinting("Achja ...");
         sleepFor(2000000);
         slowPrinting("Alle genannten Antworten waren uebrigens richtig. Hoffentlich hast du dir nicht den Kopf zerbrochen!");
-        cout << endl << "Drücke Enter um fortzufahren." << endl << endl << ">> "; 
+        cout << endl << "Drücke Enter um fortzufahren." << endl; 
         cin;
         cin.ignore();
         return true;

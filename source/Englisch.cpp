@@ -5,8 +5,8 @@ Englisch::Englisch()
 {
     this -> id = "4";
     this->name = "Englisch"; 
-    this->description = "Let's change the language!";
-    this->description2 = "Let's test your english skills! You will need to be quick for this one...";
+    this->description = "Let's change the language and test your english skills!";
+    this->description2 = "You will need to be quick for this one...";
     this->toPass = true;
 }
 
@@ -29,7 +29,7 @@ bool Englisch::specificRun()
     timer(10); 
     cout << endl;
     cout << endl; 
-    clearScreen();
+    //clearScreen();
     cout << endl << ">> ";
     cin >> answer;
     cout << answer << endl << endl; 

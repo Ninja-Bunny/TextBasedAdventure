@@ -24,7 +24,7 @@ bool Chef::specificRun()
     if (antwort == "3") 
     {
         cout << endl;
-        slowPrinting("Das war die einzig richtige Antwort! Dein Chef lobt dich und der Mail stellt sich als Phishing-Betrug heraus.");
+        slowPrinting("Das war die einzig richtige Antwort! Dein Chef lobt dich und die Mail stellt sich als Phishing-Betrug heraus.");
         sleepFor(3000000);
         return true;
     }

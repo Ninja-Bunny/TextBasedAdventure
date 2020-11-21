@@ -45,7 +45,7 @@ bool Programmieren::specificRun()
     }
     else
     {
-        slowPrinting("Leider falsch, 4 wäre die richtige Lösung gewesen!");
+        slowPrinting("Leider falsch, 4 waere die richtige Loesung gewesen!");
         slowPrinting("Schaue dir die folgende Erklaerung aus der Vorlesung nochmal an:");
         cout << endl;
         cout << "Prefix increments the value, and then proceeds with the expression." << endl;

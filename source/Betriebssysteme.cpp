@@ -30,7 +30,7 @@ bool Betriebssysteme::specificRun()
             cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
             cout << endl;
-            sleepFor(2000000);
+            sleepFor(3000000);
             passed = false; 
         }
         else if (guess > num) 

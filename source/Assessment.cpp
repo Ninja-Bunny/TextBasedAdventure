@@ -21,7 +21,6 @@ bool Assessment::specificRun()
     sleepFor(1000000);
     slowPrinting("Vor Ort hat der Personaler einige Fragen an dich. ");
     sleepFor(2000000);
-    clearScreen();
 
     cout << "1. Frage: 'Darf ich Ihnen etwas zu trinken anbieten?'" << endl;
     sleepFor(1000000);
