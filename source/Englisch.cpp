@@ -12,7 +12,7 @@ Englisch::Englisch()
 
 bool Englisch::specificRun()
 {
-    cout << termcolor::blue;
+    cout << termcolor::white;
     string answer;
     cout << "What is the correct english word for 'notwendig'?" << endl;
     slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");

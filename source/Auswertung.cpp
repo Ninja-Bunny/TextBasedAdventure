@@ -12,5 +12,5 @@ Auswertung::Auswertung()
 }
 bool Auswertung::specificRun()
 {
- return true; 
+    return true; 
 }
