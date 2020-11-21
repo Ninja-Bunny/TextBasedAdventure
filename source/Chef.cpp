@@ -30,7 +30,7 @@ bool Chef::specificRun()
     else 
     {
         cout << endl;
-        slowPrinting("Das war leider die falsche Entscheidung und du fliegst aus dem Unternehmen.");
+        slowPrinting("Das war leider die falsche Entscheidung und du fliegst aus dem Unternehmen. Hierbei handelte es sich um eine Phishing E-Mail.");
         return false;
     }
 }
