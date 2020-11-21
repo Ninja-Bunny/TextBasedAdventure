@@ -100,7 +100,7 @@ bool Assessment::specificRun()
             a2 = false;
             break;
         default:
-            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gültige Zahl eingeben!");
+            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gueltige Zahl eingeben!");
             a2 = false;
     }
     if(!a1 && !a2) //nur wenn beide Antworten falsch waren fliegt man raus 

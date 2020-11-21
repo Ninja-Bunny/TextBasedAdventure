@@ -33,6 +33,7 @@ bool Programmieren::specificRun()
     catch(const std::exception& e)
     {
         slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+        cout << endl;
     }
     
     cin.ignore();

@@ -25,7 +25,7 @@ bool Betriebssysteme::specificRun()
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
+        if(tries >=3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
         {
             cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
@@ -50,7 +50,7 @@ bool Betriebssysteme::specificRun()
         }
         else 
         {
-            cout << "Die Eingabe war ungültig." << endl;
+            cout << "Die Eingabe war ungueltig." << endl;
             passed = false; 
         }
     } while (guess != num && tries < 3); //Drei Versuche

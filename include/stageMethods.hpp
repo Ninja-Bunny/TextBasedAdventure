@@ -2,7 +2,7 @@
 #define STAGEMETHODS_HPP
 
 #include <iostream>
-#include <cstdlib> //Für zufällige Zahlen
+#include <cstdlib> //Fuer zufaellige Zahlen
 #include <ctime> //Zeit-Funktion
 #include "../include/Helpful.hpp"
 #include "../include/termcolor.hpp"
@@ -11,7 +11,7 @@ using namespace std;
 
 /*int trandom() {
     int num;
-    srand(time(0)); //Generiert eine zufällige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
+    srand(time(0)); //Generiert eine zufaellige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
     num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
     return num;
 }*/
@@ -28,7 +28,7 @@ bool inline betriebssysteme()
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >=3) //Drei Versuche, soll so gut wie unmöglich sein das Fach zu bestehen!
+        if(tries >=3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
         {
             cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
@@ -53,7 +53,7 @@ bool inline betriebssysteme()
         }
         else 
         {
-            cout << "Die Eingabe war ungültig." << endl;
+            cout << "Die Eingabe war ungueltig." << endl;
             passed = false; 
         }
     } while (guess != num && tries < 3); //Drei Versuche
@@ -320,7 +320,17 @@ bool inline chef() {
 }
 
 bool inline auswertung() {
-    return true;
+    cout << termcolor::white;
+    slowPrinting("Glueckwunsch, du hast mindestens 3/5 Pruefungen bestanden und kommst somit in das naechste Semester!");
+    cout << endl;
+    sleepFor(2000000);
+    slowPrinting("Nur wenige haetten es so weit geschafft!");
+    slowPrinting("Jetzt bist du bestens fuer ein duales Studium in IT-Security vorbereitet und kannst dich bewerben!");
+    sleepFor(3000000);
+    cout << endl << "Druecke Enter um das Spiel zu beenden" << endl;
+    cin;
+    cin.ignore();
+    return true; 
 }
 
 #endif

@@ -30,8 +30,8 @@ class Game
 
     private: 
         void setUpStage(); //liest stages aus txt ein
-        bool runToPass(); // lässt die Fächer laufen, die man bestehen muss 
-        void fail(bool b); //prüft ob man das Spiel verloren hat
+        bool runToPass(); // laesst die Faecher laufen, die man bestehen muss 
+        void fail(bool b); //prueft ob man das Spiel verloren hat
 
         int passCounter; 
         Stage* currentStage; //Pointer, der auf die aktuelle Stage zeigt

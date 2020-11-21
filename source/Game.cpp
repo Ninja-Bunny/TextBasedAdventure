@@ -14,9 +14,9 @@ Game::Game() //Konstruktor Definition
 
 void Game::run() //run() soll game starten
 {
-    while(currentStage != endingStage) //Schleife, in der das Spiel läuft 
+    while(currentStage != endingStage) //Schleife, in der das Spiel laeuft 
     {
-        if(stages[currentStage->getNext()]->toPass) //Wenn die nächste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
+        if(stages[currentStage->getNext()]->toPass) //Wenn die naechste Stage im Verlauf eine ist, die man bestehen muss, geht es hier rein 
         {
             currentStage->run(); 
             fail(currentStage->specificRun()); 
@@ -57,13 +57,13 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 bool Game::runToPass()
 {   
     
-    int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
-     //mitzählen, wie viele man bestanden hat 
+    int stageCounter = stoi(currentStage->getID()); //mitzaehlen fuer stageID
+     //mitzaehlen, wie viele man bestanden hat 
     string userInput = ""; 
     string sName = ""; 
     bool input; 
 
-    while(!haveToPass.empty()) //solange die Liste nicht leer ist, in der die Fächer sind
+    while(!haveToPass.empty()) //solange die Liste nicht leer ist, in der die Faecher sind
     {
         input = false; 
         
@@ -103,16 +103,16 @@ bool Game::runToPass()
         currentStage->run();
 
         
-        if(currentStage->specificRun()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
+        if(currentStage->specificRun()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhoeht
         {
             ++passCounter; 
         }; 
-        haveToPass.erase(currentStage->getID()); //löscht Stage from have to Pass
+        haveToPass.erase(currentStage->getID()); //loescht Stage from have to Pass
         ++stageCounter; 
 
     }
-    currentStage = stages[to_string(stageCounter+1)]; //setzt die aktuelle stage auf die, nach den Fächern
-    if(passCounter>2) //wenn man mehr als 2 Fächer bestanden hat, darf man weiterspielen
+    currentStage = stages[to_string(stageCounter+1)]; //setzt die aktuelle stage auf die, nach den Faechern
+    if(passCounter>2) //wenn man mehr als 2 Faecher bestanden hat, darf man weiterspielen
     {
         return true; 
     } 
@@ -131,7 +131,8 @@ void Game::fail(bool b)
         clearScreen(); 
         slowPrinting("YOU FAILED"); 
         cout << endl; 
-        slowPrinting("Diesmal hat es nicht gereicht. Wir sehen uns beim nächsten Versuch!"); 
+        slowPrinting("Diesmal hat es nicht gereicht. Wir sehen uns beim naechsten Versuch!"); 
+        cout << termcolor::white;
         exit(0); 
     }
 }

@@ -32,7 +32,7 @@ bool Englisch::specificRun()
     //clearScreen();
     cout << endl << ">> ";
     cin >> answer;
-    cout << answer << endl << endl; 
+    cout << endl; 
     cin.ignore();
     if (answer == "4") 
     {

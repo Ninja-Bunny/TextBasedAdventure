@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string> 
 #include <iostream>
-#include <cstdlib> //Für zufällige Zahlen
+#include <cstdlib> //Fuer zufaellige Zahlen
 #include <ctime>
 #include "../include/Helpful.hpp"
 #include "../include/termcolor.hpp"
@@ -14,7 +14,7 @@
 class Auswertung : public Stage{
     public: 
         Auswertung(); 
-        bool specificRun(int passCounter); 
+        bool specificRun(); 
 
 }; 
 

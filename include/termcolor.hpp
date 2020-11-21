@@ -1,4 +1,4 @@
-//! INFO INFO INFO Haben das Headerfile auf github gefunden, dies ist nicht unsere Arbeit, hat uns aber geholfen Platformübergreifend Fraben zu drucken :) 
+//! INFO INFO INFO Haben das Headerfile auf github gefunden, dies ist nicht unsere Arbeit, hat uns aber geholfen Platformuebergreifend Fraben zu drucken :) 
 //!
 //! termcolor
 //! ~~~~~~~~~

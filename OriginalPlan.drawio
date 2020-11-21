@@ -25,7 +25,7 @@
                 <mxCell id="8" value="Programmieren&lt;br&gt;&quot;Aufgabe suchen&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="160" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="Congratz du hast es geschafft!&lt;br&gt;Mit welchem Fach möchtest du beginnen?&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="10" value="Congratz du hast es geschafft!&lt;br&gt;Mit welchem Fach moechtest du beginnen?&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="555" y="120" width="160" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="Englisch&lt;br&gt;&quot;English&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -34,16 +34,16 @@
                 <mxCell id="12" value="Betriebssysteme&lt;br&gt;&quot;Folien lernen&quot;&lt;br&gt;immer durchfallen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="460" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="man muss 3/5 Fächern bestehen" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="13" value="man muss 3/5 Faechern bestehen" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="30" y="150" width="190" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Einführung in die Informatik&lt;br&gt;&quot;Logik&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="14" value="Einfuehrung in die Informatik&lt;br&gt;&quot;Logik&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="620" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="15" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="Mail vom Chef&lt;br&gt;&quot;Überweise 10k an Partner&quot;&lt;br&gt;-&amp;gt; ist natürlich phishing" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="15" value="Mail vom Chef&lt;br&gt;&quot;ueberweise 10k an Partner&quot;&lt;br&gt;-&amp;gt; ist natuerlich phishing" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="310" y="285" width="130" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="you failed" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -55,7 +55,7 @@
                 <mxCell id="20" value="Ende&lt;br&gt;#klausuren werden ausgewertet" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="400" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="Brandschutzvideo schauen ja? nein?&amp;nbsp;&lt;br&gt;&lt;br&gt;Später dann Brand im Betrieb, bei nicht schauen tot.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="22" value="Brandschutzvideo schauen ja? nein?&amp;nbsp;&lt;br&gt;&lt;br&gt;Spaeter dann Brand im Betrieb, bei nicht schauen tot.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="570" y="480" width="210" height="120" as="geometry"/>
                 </mxCell>
             </root>

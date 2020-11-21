@@ -38,7 +38,7 @@ bool Mathe::specificRun()
     }
     else 
     {   
-        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gültige Zahl eingeben!");
+        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gueltige Zahl eingeben!");
         return false;
     }
 }
