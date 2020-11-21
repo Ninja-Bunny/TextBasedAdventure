@@ -9,8 +9,10 @@ Auswertung::Auswertung()
     this->description = "Die Klausurergebnisse sind da!";
     this->description2 = "Hast du bestanden?";
     this->toPass = false;  
+    this->passCounter = passCounter;
 }
-bool Auswertung::specificRun()
+bool Auswertung::specificRun(passCounter)
 {
+
     return true; 
 }

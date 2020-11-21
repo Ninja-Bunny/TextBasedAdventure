@@ -14,7 +14,7 @@
 class Auswertung : public Stage{
     public: 
         Auswertung(); 
-        bool specificRun(); 
+        bool specificRun(int passCounter); 
 
 }; 
 
