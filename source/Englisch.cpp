@@ -5,7 +5,7 @@ Englisch::Englisch()
 {
     this -> id = "4";
     this->name = "Englisch"; 
-    this->description = "We changed the language?";
+    this->description = "Let's change the language!";
     this->description2 = "Let's test your english skills! You will need to be quick for this one...";
     this->toPass = true;
 }
@@ -14,6 +14,7 @@ bool Englisch::specificRun()
 {
     cout << termcolor::white;
     string answer;
+    bool a = false; 
     cout << "What is the correct english word for 'notwendig'?" << endl;
     slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
     sleepFor(1000000);
@@ -31,28 +32,22 @@ bool Englisch::specificRun()
     clearScreen();
     cout << endl << ">> ";
     cin >> answer;
-    cout << answer << endl; 
-    //cin.ignore();
+    cout << answer << endl << endl; 
+    cin.ignore();
     if (answer == "4") 
     {
-        cout << endl;
         slowPrinting("Well done!");
-        slowPrinting("Here is a useful sentence for you:");
-        cout << endl;
-        slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
-        cout << endl << "Press Enter to continue!" << endl << ">>";
-        cin;
-        cin.ignore(); 
-        return true;
+        a = true;
     }
     else
     {
         slowPrinting("Sadly you were wrong!");
-        slowPrinting("Here is a useful sentence for you:");
-        cout << endl;
-        slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
-        cout << endl << "Press Enter to continue!";
-        cin.ignore(); 
-        return false;
+        a = false;
     }
+    slowPrinting("Here is a useful sentence for you:");
+    cout << endl;
+    slowPrinting("It's necessary for a shirt to have 1 collar (-> 1*c) and 2 sleeves (-> 2*s)!");
+    cout << endl << "Press Enter to continue!" << endl;
+    cin.ignore(); 
+    return a; 
 }
