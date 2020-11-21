@@ -22,6 +22,7 @@ void Game::run() //run() soll game starten
             fail(runToPass());    //special Teil folgt, da man hier in einem Loop ist 
         }
         currentStage->run();
+           
         fail(currentStage->specificRun());
         currentStage=stages[currentStage->getNext()];
     }
@@ -54,6 +55,7 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 
 bool Game::runToPass()
 {   
+    
     int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
     int passCounter = 0; //mitzählen, wie viele man bestanden hat 
     string userInput = ""; 
@@ -98,6 +100,8 @@ bool Game::runToPass()
             }
         }
         currentStage->run();
+
+        
         if(currentStage->specificRun()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
         {
             ++passCounter; 
@@ -148,7 +152,7 @@ bool Game::prologue()
     clearScreen();
     cout << termcolor::white;
     slowPrinting("Willst du die Simulation starten?");
-    slowPrinting("Tippe 'Ja' um fortzufahren und 'Nein' um abzubrechen: ");
+    slowPrinting("Tippe 'Ja' um fortzufahren oder etwas anderes um abzubrechen: ");
     cout << endl << ">> ";
     string begin;
     cin >> begin;
@@ -158,13 +162,8 @@ bool Game::prologue()
     {
         return true;
     }
-    else if (begin == "Nein" || begin == "nein")
-    {
-        return false;
-    }
     else
     {
-        //cout << "Nochmal";
         return false;
     }
 }

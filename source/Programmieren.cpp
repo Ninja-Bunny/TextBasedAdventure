@@ -12,6 +12,7 @@ Programmieren::Programmieren()
 bool Programmieren::specificRun()
 {
     cout << termcolor::white;
+    string userInput; 
     int a = 3, b = 2, z;
     b = a++;
     int ergebnis = ++b;
@@ -24,7 +25,16 @@ bool Programmieren::specificRun()
     cout << "* cout << ++b; *" << endl;
     stars(longestLine);
     cout << endl << ">> ";
-    cin >> z;
+    cin >> userInput;
+    try
+    {
+        z = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
+    
     cin.ignore();
     if (z == ergebnis)
     {
