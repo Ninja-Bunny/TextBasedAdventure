@@ -22,6 +22,7 @@ void Game::run() //run() soll game starten
             fail(runToPass());    //special Teil folgt, da man hier in einem Loop ist 
         }
         currentStage->run();
+           
         fail(currentStage->specificRun());
         currentStage=stages[currentStage->getNext()];
     }
@@ -54,6 +55,7 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
 
 bool Game::runToPass()
 {   
+    
     int stageCounter = stoi(currentStage->getID()); //mitzählen für stageID
     int passCounter = 0; //mitzählen, wie viele man bestanden hat 
     string userInput = ""; 
@@ -65,6 +67,7 @@ bool Game::runToPass()
         input = false; 
         
         while(!input) {
+            cout << termcolor::cyan;
             slowPrinting("Welches Fach moechtest du bestreiten?"); 
             cout << endl; 
             for(auto const& x : haveToPass)
@@ -97,6 +100,8 @@ bool Game::runToPass()
             }
         }
         currentStage->run();
+
+        
         if(currentStage->specificRun()) //wenn die aktuelle stage bestanden worden ist, wird der passCOunter erzhöht
         {
             ++passCounter; 

@@ -20,6 +20,7 @@ bool Betriebssysteme::specificRun()
     do {
         slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
         cout << endl; 
+        cout << ">> ";
         cin >> guess;
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
