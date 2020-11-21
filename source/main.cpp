@@ -11,11 +11,8 @@ using namespace std;
 int main() {
 
     /* TESTING */
-    //informatik();
-    //englisch(); 
-
-    //mathe(); 
- 
+    auswertung();
+    /*
     Game game; //erstellt neue Game Instanz
     clearScreen(); 
 
@@ -29,6 +26,6 @@ int main() {
         cout << termcolor::white; 
         cout << endl << "Schade! Dann bis zum naechsten Mal!";
     }
-    
+    */
     return 0;
 }
