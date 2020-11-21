@@ -62,8 +62,10 @@ bool inline betriebssysteme()
 
 bool inline assessment() 
 {
+    cout << termcolor::magenta;
     bool a1 = false; //antwort 1
     bool a2 = false; //antwort 2
+    string userInput; 
     sleepFor(1000000);
     slowPrinting("Vor Ort hat der Personaler einige Fragen an dich. ");
     sleepFor(2000000);
@@ -78,8 +80,18 @@ bool inline assessment()
     cout << endl << ">> ";
 
     int answer1;
-    cin >> answer1;
+    cin >> userInput;
+    try
+    {
+        answer1 = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
+    
     cin.ignore(); 
+ 
     cout << endl; 
     switch (answer1) //switch case hier am Sinnvollsten
     {
@@ -110,7 +122,15 @@ bool inline assessment()
     cout << endl << ">> ";
 
     int answer2;
-    cin >> answer2;
+        cin >> userInput;
+    try
+    {
+        answer2 = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
     cin.ignore(); 
     cout << endl; 
 
@@ -142,7 +162,6 @@ bool inline assessment()
         sleepFor(2000000);
         return true; 
     }
-    
 }
 
 bool inline mathe() {

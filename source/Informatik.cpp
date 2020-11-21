@@ -26,7 +26,7 @@ bool Informatik::specificRun()
     cout << endl << "5) Disjunktive Normalform (DNF)" << endl << endl << ">> ";
     cin >> zahl;
     cin.ignore();
-    if (zahl == "1"||zahl =="2"||zahl =="3"||zahl =="4"||zahl =="5")
+    if (zahl == "1"||zahl == "2"||zahl == "3"||zahl == "4"||zahl == "5")
     {
         cout << endl;
         slowPrinting("Da hast du vollkommen recht!");
@@ -40,7 +40,7 @@ bool Informatik::specificRun()
     else 
     {
         cout << endl;
-        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
+        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gültige Zahl eingeben!");
         return false;
     }
 }

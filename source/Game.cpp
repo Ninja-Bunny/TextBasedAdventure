@@ -152,7 +152,7 @@ bool Game::prologue()
     clearScreen();
     cout << termcolor::red;
     slowPrinting("Willst du die Simulation starten?");
-    slowPrinting("Tippe 'Ja' um fortzufahren und 'Nein' um abzubrechen: ");
+    slowPrinting("Tippe 'Ja' um fortzufahren oder etwas anderes um abzubrechen: ");
     cout << endl << ">> ";
     string begin;
     cin >> begin;
@@ -162,13 +162,8 @@ bool Game::prologue()
     {
         return true;
     }
-    else if (begin == "Nein" || begin == "nein")
-    {
-        return false;
-    }
     else
     {
-        //cout << "Nochmal";
         return false;
     }
 }

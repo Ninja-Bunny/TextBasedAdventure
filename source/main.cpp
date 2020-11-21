@@ -13,20 +13,21 @@ int main() {
     /* TESTING */
     //auswertung();
     //chef(); 
+    assessment();
     
-    Game game; //erstellt neue Game Instanz
-    clearScreen(); 
+    // Game game; //erstellt neue Game Instanz
+    // clearScreen(); 
 
-    if(game.prologue()) //Wenn user spielen will -> starte spiel
-    {
-        clearScreen();
-        game.run(); 
-    }
-    else 
-    {   
-        cout << termcolor::white; 
-        cout << endl << "Schade! Dann bis zum naechsten Mal!";
-    }
+    // if(game.prologue()) //Wenn user spielen will -> starte spiel
+    // {
+    //     clearScreen();
+    //     game.run(); 
+    // }
+    // else 
+    // {   
+    //     cout << termcolor::white; 
+    //     cout << endl << "Schade! Dann bis zum naechsten Mal!";
+    // }
     
     return 0;
 }

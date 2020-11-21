@@ -15,9 +15,19 @@ bool Mathe::specificRun()
     cout << termcolor::white;
     int z;
     int ergebnis = (3*7)%5;
+    string userInput; 
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
     cout << endl << ">> ";
-    cin >> z;
+    cin >> userInput;
+    try
+    {
+        z = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
+    
     cin.ignore(); 
     if (z == ergebnis) 
     {
@@ -28,7 +38,7 @@ bool Mathe::specificRun()
     }
     else 
     {   
-        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
+        slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gültige Zahl eingeben!");
         return false;
     }
 }

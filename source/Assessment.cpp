@@ -17,6 +17,7 @@ bool Assessment::specificRun()
     cout << termcolor::magenta;
     bool a1 = false; //antwort 1
     bool a2 = false; //antwort 2
+    string userInput; 
     sleepFor(1000000);
     slowPrinting("Vor Ort hat der Personaler einige Fragen an dich. ");
     sleepFor(2000000);
@@ -31,8 +32,18 @@ bool Assessment::specificRun()
     cout << endl << ">> ";
 
     int answer1;
-    cin >> answer1;
+    cin >> userInput;
+    try
+    {
+        answer1 = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
+    
     cin.ignore(); 
+ 
     cout << endl; 
     switch (answer1) //switch case hier am Sinnvollsten
     {
@@ -63,7 +74,15 @@ bool Assessment::specificRun()
     cout << endl << ">> ";
 
     int answer2;
-    cin >> answer2;
+        cin >> userInput;
+    try
+    {
+        answer2 = stoi(userInput); 
+    }
+    catch(const std::exception& e)
+    {
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+    }
     cin.ignore(); 
     cout << endl; 
 
@@ -82,7 +101,7 @@ bool Assessment::specificRun()
             a2 = false;
             break;
         default:
-            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen oder schoener schreiben!");
+            slowPrinting("Du musst naechstes mal die Aufgabenstellung genauer lesen, schoener schreiben oder eine gültige Zahl eingeben!");
             a2 = false;
     }
     if(!a1 && !a2) //nur wenn beide Antworten falsch waren fliegt man raus 
