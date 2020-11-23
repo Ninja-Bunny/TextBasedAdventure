@@ -22,7 +22,7 @@ using namespace std;
 
 int inline trandom() {
     int num;
-    srand(time(0)); //Generiert eine zufaellige Zahl mithilfe der aktuellen Uhrzeit in Sekunden
+    srand(time(0)); //SOrgt dafür, dass eine zufaellige Zahl später mit rand() aufgerufen wird
     num = 1 + rand() % 100; //Modulo 100 bewirkt, dass sich die Zahl immer zwischen 1 und 100 befindet
     return num;
 }

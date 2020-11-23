@@ -1,6 +1,7 @@
 
 #include "../include/Stage.hpp"
 #include "../include/Betriebssysteme.hpp"
+#include "../include/Helpful.hpp"
 
 Betriebssysteme::Betriebssysteme()
 {

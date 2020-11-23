@@ -1,5 +1,6 @@
 #include "../include/Assessment.hpp"
 #include "../include/Stage.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 
