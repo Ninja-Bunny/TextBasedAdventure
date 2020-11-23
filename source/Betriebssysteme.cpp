@@ -15,6 +15,7 @@ bool Betriebssysteme::specificRun()
 {
     cout << termcolor::white;
     int num = trandom(); 
+    cout << num << endl; 
     bool passed = false; 
     int guess, tries = 0;
     do {
@@ -25,7 +26,7 @@ bool Betriebssysteme::specificRun()
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >=3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
+        if(tries >3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
         {
             cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");

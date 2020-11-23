@@ -16,7 +16,6 @@ bool Englisch::specificRun()
     string answer;
     bool a = false; 
     cout << "What is the correct english word for 'notwendig'?" << endl;
-    slowPrinting("Type 1, 2, 3, 4 or 5 and press enter!");
     sleepFor(1000000);
     cout << endl << "1) neccesary";
     cout << endl << "2) neccessary";
@@ -25,7 +24,8 @@ bool Englisch::specificRun()
     cout << endl << "5) necassary" << endl << endl;;
     sleepFor(2000000);
     slowPrinting("You have 10 seconds from NOW!");
-    slowPrinting("Write whenever you feel ready. Don't forget to press enter.");
+    slowPrinting("Just remember the number you want to choose!");
+    sleepFor(1000000);
     timer(10); 
     cout << endl;
     cout << endl; 
