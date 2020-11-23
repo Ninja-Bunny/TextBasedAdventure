@@ -14,6 +14,7 @@
 class Englisch : public Stage{
     public: 
         Englisch(); 
+        ~Englisch(); 
         bool specificRun(); 
 
 }; 

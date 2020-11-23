@@ -15,6 +15,7 @@ class Stage
 {
     public: 
         Stage(); 
+        ~Stage(); 
         void run(); 
         int getID(); 
         string getName(); 

@@ -10,6 +10,12 @@ Auswertung::Auswertung()
     this->description2 = "Hast du bestanden?";
     this->toPass = false; 
 }
+
+Auswertung::~Auswertung()
+{
+
+}
+
 bool Auswertung::specificRun()
 {
     cout << termcolor::white;

@@ -8,6 +8,11 @@ Stage::Stage()
     //do nothing; 
 }
 
+Stage::~Stage()
+{
+    
+}
+
 void Stage::run()
 {
     cout << termcolor::cyan;

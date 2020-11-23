@@ -12,6 +12,11 @@ Betriebssysteme::Betriebssysteme()
     this->toPass = true;  
 }
 
+Betriebssysteme::~Betriebssysteme()
+{
+    
+}
+
 bool Betriebssysteme::specificRun()
 {
     cout << termcolor::white;

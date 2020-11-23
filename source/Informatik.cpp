@@ -10,6 +10,11 @@ Informatik::Informatik()
     this->toPass = true;
 }
 
+Informatik::~Informatik()
+{
+    
+}
+
 bool Informatik::specificRun()
 {
     cout << termcolor::white;
