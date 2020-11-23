@@ -1,10 +1,11 @@
 
 #include "../include/Stage.hpp"
 #include "../include/Betriebssysteme.hpp"
+#include "../include/Helpful.hpp"
 
 Betriebssysteme::Betriebssysteme()
 {
-    this->id = "5";
+    this->id = 5;
     this->name = "Betriebssysteme"; 
     this->description = "Fuer die Klausurvorbereitung im Fach Betriebssysteme gibt es genau 100 Folien.";
     this->description2 = "Welche Folie wird wohl in der Klausur drankommen?";
@@ -15,7 +16,7 @@ bool Betriebssysteme::specificRun()
 {
     cout << termcolor::white;
     int num = trandom(); 
-    cout << num << endl; 
+    //cout << num << endl; -> debugging
     bool passed = false; 
     int guess, tries = 0;
     do {
@@ -55,5 +56,6 @@ bool Betriebssysteme::specificRun()
             passed = false; 
         }
     } while (guess != num && tries < 3); //Drei Versuche
+    cout << endl; 
     return passed; 
 }

@@ -3,7 +3,7 @@
 
 Mathe::Mathe()
 {
-    this -> id = "2";
+    this -> id = 2;
     this->name = "Mathe"; 
     this->description = "Du sitzt im Matheunterricht und bist am verzweifeln. Ob du folgende Frage loesen kannst?";
     this->description2 = "Hier kommt die ultrawichtige Frage! ";

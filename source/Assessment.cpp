@@ -1,11 +1,12 @@
 #include "../include/Assessment.hpp"
 #include "../include/Stage.hpp"
+#include "../include/Helpful.hpp"
 
 using namespace std;
 
 Assessment::Assessment()
 {
-    this -> id = "0"; 
+    this -> id = 0; 
     this->name = "Assessment Center"; 
     this->description = "Herzlichen Glueckwunsch!";
     this->description2 = "Du wurdest zum Auswahlverfahren eingeladen.";
