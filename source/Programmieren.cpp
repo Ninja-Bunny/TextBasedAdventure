@@ -3,7 +3,7 @@
 
 Programmieren::Programmieren()
 {
-    this -> id = "3";
+    this -> id = 3;
     this->name = "Programmieren"; 
     this->description = "Deine Programmierkuenste in C++ nehmen rasant zu.";
     this->description2 = "Was ist der Output von folgendem Code:";

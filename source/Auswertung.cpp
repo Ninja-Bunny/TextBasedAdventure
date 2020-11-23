@@ -4,7 +4,7 @@
 
 Auswertung::Auswertung()
 {
-    this -> id = "8";
+    this -> id = 8;
     this->name = "Auswertung der Klausuren"; 
     this->description = "Die Klausurergebnisse sind da!";
     this->description2 = "Hast du bestanden?";

@@ -33,15 +33,15 @@ void Game::run() //run() soll game starten
 
 void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Infos 
 {
-    stages["0"] = new Assessment(); 
-    stages["1"] = new BeginnSemester();
-    stages["2"] = new Mathe();
-    stages["3"] = new Programmieren();
-    stages["4"] = new Englisch();
-    stages["5"] = new Betriebssysteme();
-    stages["6"] = new Informatik();
-    stages["7"] = new Chef();
-    stages["8"] = new Auswertung();
+    stages[0] = new Assessment(); 
+    stages[1] = new BeginnSemester();
+    stages[2] = new Mathe();
+    stages[3] = new Programmieren();
+    stages[4] = new Englisch();
+    stages[5] = new Betriebssysteme();
+    stages[6] = new Informatik();
+    stages[7] = new Chef();
+    stages[8] = new Auswertung();
 
     for (auto const& x : stages)
     {
@@ -50,14 +50,14 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
             haveToPass[x.first] = x.second; 
         }
     }
-    currentStage = stages["0"]; 
-    endingStage = stages["8"]; 
+    currentStage = stages[0]; 
+    endingStage = stages[8]; 
 }
 
 bool Game::runToPass()
 {   
     
-    int stageCounter = stoi(currentStage->getID()); //mitzaehlen fuer stageID
+    int stageCounter = currentStage->getID(); //mitzaehlen fuer stageID
      //mitzaehlen, wie viele man bestanden hat 
     string userInput = ""; 
     string sName = ""; 
@@ -111,7 +111,7 @@ bool Game::runToPass()
         ++stageCounter; 
 
     }
-    currentStage = stages[to_string(stageCounter+1)]; //setzt die aktuelle stage auf die, nach den Faechern
+    currentStage = stages[stageCounter+1]; //setzt die aktuelle stage auf die, nach den Faechern
     if(passCounter>2) //wenn man mehr als 2 Faecher bestanden hat, darf man weiterspielen
     {
         return true; 

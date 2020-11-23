@@ -36,9 +36,8 @@ class Game
         int passCounter; 
         Stage* currentStage; //Pointer, der auf die aktuelle Stage zeigt
         Stage* endingStage; //Pointer, der auf die End Stage zeigt
-        map<string, Stage*> stages; //speichert alle stages
-        //map<int, Stage*> stages; 
-        map<string, Stage*> haveToPass; //speichert die Stages, die man bestehen muss 
+        map<int, Stage*> stages; //speichert alle stages
+        map<int, Stage*> haveToPass; //speichert die Stages, die man bestehen muss 
 }; 
 
 #endif

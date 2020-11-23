@@ -3,7 +3,7 @@
 
 Informatik::Informatik()
 {
-    this->id = "6";
+    this->id = 6;
     this->name = "Informatik"; 
     this->description = "Hier ist Logik gefragt.";
     this->description2 = "Wie logisch arbeitet dein Gehirn?";

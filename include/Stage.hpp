@@ -16,16 +16,16 @@ class Stage
     public: 
         Stage(); 
         void run(); 
-        string getID(); 
+        int getID(); 
         string getName(); 
         string getDescription(); 
         string getDescription2(); 
-        string getNext(); //Muss das Fach bestanden werden? 
+        int getNext(); //Muss das Fach bestanden werden? 
         virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden. = 0 weil? i dunno? aber es geht
         bool toPass;
 
     protected: 
-        string id;  //stageID
+        int id;  //stageID
         string name; //stageName
         string description; //shortTest
         string description2; //Question to Answer
