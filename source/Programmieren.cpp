@@ -9,6 +9,12 @@ Programmieren::Programmieren()
     this->description2 = "Was ist der Output von folgendem Code:";
     this->toPass = true;
 }
+
+Programmieren::~Programmieren()
+{
+
+}
+
 bool Programmieren::specificRun()
 {
     cout << termcolor::white;

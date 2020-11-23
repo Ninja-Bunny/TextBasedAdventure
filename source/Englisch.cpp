@@ -10,6 +10,11 @@ Englisch::Englisch()
     this->toPass = true;
 }
 
+Englisch::~Englisch()
+{
+    
+}
+
 bool Englisch::specificRun()
 {
     cout << termcolor::white;

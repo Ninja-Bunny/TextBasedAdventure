@@ -14,6 +14,7 @@
 class BeginnSemester : public Stage{
     public: 
         BeginnSemester(); 
+        ~BeginnSemester();
         bool specificRun(); 
 
 }; 

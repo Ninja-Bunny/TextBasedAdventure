@@ -14,6 +14,7 @@
 class Informatik : public Stage{
     public: 
         Informatik(); 
+        ~Informatik(); 
         bool specificRun(); 
 
 }; 

@@ -14,6 +14,7 @@
 class Chef : public Stage{
     public: 
         Chef(); 
+        ~Chef(); 
         bool specificRun(); 
 
 }; 

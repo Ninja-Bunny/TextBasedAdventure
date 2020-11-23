@@ -14,6 +14,7 @@
 class Betriebssysteme : public Stage{
     public: 
         Betriebssysteme(); 
+        ~Betriebssysteme(); 
         bool specificRun(); 
 
 }; 

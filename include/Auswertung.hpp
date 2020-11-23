@@ -14,6 +14,7 @@
 class Auswertung : public Stage{
     public: 
         Auswertung(); 
+        ~Auswertung(); 
         bool specificRun(); 
 
 }; 

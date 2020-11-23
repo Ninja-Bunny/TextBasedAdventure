@@ -13,6 +13,11 @@ Assessment::Assessment()
     this->toPass = false;  
 }
 
+Assessment::~Assessment()
+{
+    
+}
+
 bool Assessment::specificRun()
 {
     cout << termcolor::magenta;

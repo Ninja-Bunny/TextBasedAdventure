@@ -10,6 +10,11 @@ BeginnSemester::BeginnSemester()
     this->toPass = false;  
 }
 
+BeginnSemester::~BeginnSemester()
+{
+    
+}
+
 bool BeginnSemester::specificRun()
 {
     return true;

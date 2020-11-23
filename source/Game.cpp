@@ -12,6 +12,11 @@ Game::Game() //Konstruktor Definition
     setUpStage(); 
 }
 
+Game::~Game()
+{
+    
+}
+
 void Game::run() //run() soll game starten
 {
     while(currentStage != endingStage) //Schleife, in der das Spiel laeuft 

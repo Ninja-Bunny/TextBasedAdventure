@@ -11,6 +11,11 @@ Chef::Chef()
     this->toPass = false;  
 }
 
+Chef::~Chef()
+{
+    
+}
+
 bool Chef::specificRun()
 {
     string antwort;

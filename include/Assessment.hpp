@@ -14,6 +14,7 @@
 class Assessment : public Stage{
     public: 
         Assessment(); 
+        ~Assessment();
         bool specificRun(); 
 
 }; 

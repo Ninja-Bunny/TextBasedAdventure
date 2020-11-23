@@ -10,6 +10,11 @@ Mathe::Mathe()
     this->toPass = true;
 }
 
+Mathe::~Mathe()
+{
+    
+}
+
 bool Mathe::specificRun()
 {
     cout << termcolor::white;

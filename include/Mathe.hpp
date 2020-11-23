@@ -14,6 +14,7 @@
 class Mathe : public Stage{
     public: 
         Mathe(); 
+        ~Mathe(); 
         bool specificRun(); 
 
 }; 

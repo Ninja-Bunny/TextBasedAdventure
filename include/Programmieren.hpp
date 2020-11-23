@@ -14,6 +14,7 @@
 class Programmieren : public Stage{
     public: 
         Programmieren(); 
+        ~Programmieren(); 
         bool specificRun(); 
 
 }; 
