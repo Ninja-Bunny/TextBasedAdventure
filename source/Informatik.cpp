@@ -40,7 +40,6 @@ bool Informatik::specificRun()
         sleepFor(2000000);
         slowPrinting("Alle genannten Antworten waren uebrigens richtig. Hoffentlich hast du dir nicht den Kopf zerbrochen!");
         cout << endl << "Druecke Enter um fortzufahren." << endl; 
-        cin;
         cin.ignore();
         return true;
     }

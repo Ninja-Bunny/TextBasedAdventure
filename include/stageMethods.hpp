@@ -323,7 +323,7 @@ bool inline auswertung() {
     slowPrinting("Jetzt bist du bestens fuer ein duales Studium in IT-Security vorbereitet und kannst dich bewerben!");
     sleepFor(3000000);
     cout << endl << "Druecke Enter um das Spiel zu beenden" << endl;
-    cin;
+    //cin;
     cin.ignore();
     return true; 
 }
