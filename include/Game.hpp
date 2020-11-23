@@ -28,7 +28,7 @@ class Game
         void run(); //wichtig, wird in main() aufgerufen
         bool prologue(); //startet Prolog
 
-    private: 
+    private: //Datenkapselung
         void setUpStage(); //liest stages aus txt ein
         bool runToPass(); // laesst die Faecher laufen, die man bestehen muss 
         void fail(bool b); //prueft ob man das Spiel verloren hat

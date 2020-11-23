@@ -24,7 +24,7 @@ class Stage
         virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden. = 0 weil? i dunno? aber es geht
         bool toPass;
 
-    protected: 
+    protected: //Datenkapselung
         string id;  //stageID
         string name; //stageName
         string description; //shortTest

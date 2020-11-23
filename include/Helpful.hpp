@@ -83,26 +83,4 @@ void inline timer(int seconds)
     }
 }
 
-/*void inline gotoxy(int x, int y)
-{
-	COORD d;
-	d.X = x;
-	d.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), d);
-}*/
-
-/*void inline load()
-{
-	char a = 219;
-	gotoxy(36, 14); //Verschiebt den Ladebalken
-	cout << "Klausurergebnisse werden geladen..."<< endl;
-	gotoxy(30,16);
-	for(int r = 1; r <= 30; r++) //Laenge des Balkens
-	{
-		for (int q = 0; q <= 100000000; q++); //Geschwindigkeit des Fortschritts
-		cout << a;
-        if ()
-	}
-}*/
-
 #endif
