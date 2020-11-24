@@ -23,7 +23,7 @@ int main() {
     else 
     {   
         cout << termcolor::white; 
-        cout << "Bis zum naechsten Mal!";
+        slowPrinting("Bis zum naechsten Mal!");
     }
     
     return 0;
