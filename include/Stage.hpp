@@ -18,10 +18,10 @@ class Stage
         ~Stage(); 
         void run(); 
         int getID(); 
-        string getName(); 
-        string getDescription(); 
-        string getDescription2(); 
-        int getNext(); //Muss das Fach bestanden werden? 
+        string const getName(); 
+        string const getDescription(); 
+        string const getDescription2(); 
+        int const getNext(); //Muss das Fach bestanden werden? 
         virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden.
         bool toPass;
 

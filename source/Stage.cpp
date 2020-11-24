@@ -33,19 +33,19 @@ int Stage::getID()
     return id; 
 }
 
-string Stage::getName()
+string const Stage::getName()
 {
     return name; 
 } 
-string Stage::getDescription()
+string const Stage::getDescription()
 {
     return description; 
 } 
-string Stage::getDescription2()
+string const Stage::getDescription2()
 {
     return description2; 
 }
-int Stage::getNext()
+int const Stage::getNext()
 {
     int i = id;
     ++i;
