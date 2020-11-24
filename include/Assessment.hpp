@@ -1,10 +1,10 @@
 #ifndef ASSESSMENT_HPP
 #define ASSESSMENT_HPP
 
-#pragma once
-#include <iostream>
+#pragma once 
+//Vorgabe Schmidt
+#include <iostream> 
 #include <string> 
-#include <iostream>
 #include <cstdlib> //Fuer zufaellige Zahlen
 #include <ctime>
 #include "../include/Helpful.hpp"
@@ -13,9 +13,9 @@
 
 class Assessment : public Stage{
     public: 
-        Assessment(); 
-        ~Assessment();
-        bool specificRun(); 
+        Assessment(); //Konstruktor
+        ~Assessment(); //Destruktor
+        bool specificRun(); //virtuelle Klasse
 
 }; 
 

@@ -6,7 +6,7 @@ using namespace std;
 
 Assessment::Assessment()
 {
-    this -> id = 0; 
+    this -> id = 0; //Pointer auf ID
     this->name = "Assessment Center"; 
     this->description = "Herzlichen Glueckwunsch!";
     this->description2 = "Du wurdest zum Auswahlverfahren eingeladen.";
@@ -38,13 +38,13 @@ bool Assessment::specificRun()
 
     int answer1;
     cin >> userInput;
-    try
+    try //Exception werfen
     {
-        answer1 = stoi(userInput); 
+        answer1 = stoi(userInput); //stoi probiert string in int umzuwandeln
     }
-    catch(const std::exception& e)
+    catch(const std::exception& e) //Exception falls Eintritt behandeln
     {
-        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
+        slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); //danach ganz normal weiter -> default case wird aufgerufen, da Eingabe nicht richtig
     }
     
     cin.ignore(); 
@@ -56,7 +56,7 @@ bool Assessment::specificRun()
             slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es wie eine Zurueckweisung wirkt.");
             cout << endl; 
             a1 = false; //hier bist du immer direkt aus der ganzen funktion rausgeflogen, wegen dem return statement
-            break;
+            break; //Verlassen der switch-case, Ansonsten würde nächster case einfach folgen
         case 2:
             slowPrinting("Diese Antwort kommt nicht gut beim Personaler an, da es unangebracht ist Sonderwuensche zu aeussern.");
             cout << endl; 

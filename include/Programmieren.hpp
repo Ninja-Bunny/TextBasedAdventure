@@ -5,7 +5,6 @@
 #include "../include/Stage.hpp"
 #include <iostream>
 #include <string> 
-#include <iostream>
 #include <cstdlib> //Fuer zufaellige Zahlen
 #include <ctime>
 #include "../include/Helpful.hpp"

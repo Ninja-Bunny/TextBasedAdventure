@@ -22,7 +22,7 @@ class Stage
         string getDescription(); 
         string getDescription2(); 
         int getNext(); //Muss das Fach bestanden werden? 
-        virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden. = 0 weil? i dunno? aber es geht
+        virtual bool specificRun() = 0; //virtual, damit die derived classes aufgerufen werden.
         bool toPass;
 
     protected: //Datenkapselung

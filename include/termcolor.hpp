@@ -1,4 +1,6 @@
-//! INFO INFO INFO Haben das Headerfile auf github gefunden, dies ist nicht unsere Arbeit, hat uns aber geholfen Platformuebergreifend Fraben zu drucken :) 
+/* Haben das Headerfile auf github gefunden, dies ist nicht unsere Arbeit, hat uns aber geholfen Platformuebergreifend Farben zu drucken :) */
+/* Bei Windows allein wäre das kein Problem gewesen, aber es sollte auch auf macOS und Linux funktionieren!                                 */
+
 //!
 //! termcolor
 //! ~~~~~~~~~

@@ -21,7 +21,7 @@ void Stage::run()
     int sID = this->id; 
     cout << endl; 
     hyphens(name); //Trennstriche
-    slowPrinting("|| " + name + " ||"); //ueberschrift bzw. Name der Stage
+    slowPrinting("|| " + name + " ||"); //Ueberschrift bzw. Name der Stage
     hyphens(name);
     slowPrinting(description); 
     slowPrinting(description2); 

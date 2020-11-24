@@ -45,10 +45,10 @@ void inline slowPrinting(string s)
 
 void inline clearScreen()
 {
-    #ifdef _WIN32
-        system("CLS");
+    #ifdef _WIN32 
+        system("CLS"); //Windows
     #else
-        system("clear");
+        system("clear"); //Linux, macOS
     #endif
 }
 
@@ -63,7 +63,7 @@ void inline hyphens(string title)
 
 void inline stars(string title)
 {
-    for(int i = 0; i < (title.size() +2); i++) //Sterne in Laenge der ueberschrift
+    for(int i = 0; i < (title.size() +2); i++) //Sterne in Laenge der Ueberschrift
     {
         cout << "*";
     }
@@ -74,7 +74,7 @@ void inline timer(int seconds)
 {
     for (int i = seconds; i > 0; i--) 
     {
-        cout << i << ", " << flush;
+        cout << i << ", " << flush; //flush für macOS
         sleepFor(1000000); //=1 Sekunde in Mikrosekunden
         //clearScreen();
         if (i == 1) {

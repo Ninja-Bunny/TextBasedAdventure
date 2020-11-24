@@ -48,11 +48,11 @@ void Game::setUpStage() // Erstellt die Stages, und speichert alle wichtigen Inf
     stages[7] = new Chef();
     stages[8] = new Auswertung();
 
-    for (auto const& x : stages)
+    for (auto const& x : stages) //Für jedes Objekt, das in der map gespeichert ist
     {
-        if(x.second->toPass)
+        if(x.second->toPass) //second liefert Inhalt
         {
-            haveToPass[x.first] = x.second; 
+            haveToPass[x.first] = x.second; //first liefert key
         }
     }
     currentStage = stages[0]; 
@@ -165,7 +165,7 @@ bool Game::prologue()
     cin >> begin;
     cin.ignore(); 
     cout << endl; 
-    if (begin == "Ja" || begin == "ja")
+    if (begin == "Ja" || begin == "ja") //beide Varianten abgedeckt
     {
         return true;
     }
