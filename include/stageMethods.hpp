@@ -13,22 +13,26 @@ using namespace std;
 
 bool inline betriebssysteme() 
 {
-    int num = trandom(); 
-    bool passed = false; 
+    cout << termcolor::white;
+    int num = trandom(); //Generiert zufällige Zahl (siehe Helpful.hpp)
+    //cout << num << endl; -> debugging
+    bool passed = false; //Initialisierung
     int guess, tries = 0;
     do {
         slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
-        cout << endl; 
+        cout << endl;
+        cout << num << endl; //scheissdreck 
+        cout << ">> ";
         cin >> guess;
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >=3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
+        if((tries == 3) && (num != guess)) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
         {
-            cout << endl << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
+            cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
             cout << endl;
-            sleepFor(2000000);
+            sleepFor(3000000); //Pause, um Ausgabe dramatischer zu machen
             passed = false; 
         }
         else if (guess > num) 
@@ -43,7 +47,7 @@ bool inline betriebssysteme()
         }
         else if (guess == num)
         {
-            cout << "Du hast die richtige Folie gelernt und die Klausur als einer der Einzigen im Kurs bestanden!" << endl << endl;
+            cout << "Du hast als einer der Einzigen im Kurs bestanden!" << endl;
             passed = true; 
         }
         else 
@@ -52,7 +56,8 @@ bool inline betriebssysteme()
             passed = false; 
         }
     } while (guess != num && tries < 3); //Drei Versuche
-    return passed; 
+    cout << endl; 
+    return passed;  
 }
 
 bool inline assessment() 

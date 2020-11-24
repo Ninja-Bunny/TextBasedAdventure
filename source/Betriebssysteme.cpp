@@ -26,13 +26,14 @@ bool Betriebssysteme::specificRun()
     int guess, tries = 0;
     do {
         slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
-        cout << endl; 
+        cout << endl;
+        cout << num << endl; //scheissdreck 
         cout << ">> ";
         cin >> guess;
         cin.ignore(); //brauche ich nach dem cin >>, damit in der Game::run() mein getline keinen Fehler produziert
         tries++;
 
-        if(tries >3) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
+        if((tries == 3) && (num != guess)) //Drei Versuche, soll so gut wie unmoeglich sein das Fach zu bestehen!
         {
             cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
@@ -62,5 +63,5 @@ bool Betriebssysteme::specificRun()
         }
     } while (guess != num && tries < 3); //Drei Versuche
     cout << endl; 
-    return passed; 
+    return passed;
 }
