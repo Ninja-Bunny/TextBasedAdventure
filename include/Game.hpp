@@ -24,7 +24,7 @@ class Game
 {
     public: 
         Game(); //Konstruktor 
-        ~Game(); //Destruktor -> brauchen wir den? 
+        ~Game(); //Destruktor
         void run(); //wichtig, wird in main() aufgerufen
         bool prologue(); //startet Prolog
 
