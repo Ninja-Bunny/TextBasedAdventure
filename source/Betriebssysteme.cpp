@@ -20,9 +20,9 @@ Betriebssysteme::~Betriebssysteme()
 bool Betriebssysteme::specificRun()
 {
     cout << termcolor::white;
-    int num = trandom(); 
+    int num = trandom(); //Generiert zufällige Zahl (siehe Helpful.hpp)
     //cout << num << endl; -> debugging
-    bool passed = false; 
+    bool passed = false; //Initialisierung
     int guess, tries = 0;
     do {
         slowPrinting("Nenne eine Zahl zwischen 1 und 100: "); 
@@ -37,7 +37,7 @@ bool Betriebssysteme::specificRun()
             cout << "Leider falsch, um die Pruefung zu bestehen haettest du die Seite " << num << " lernen muessen!" << endl << endl;
             slowPrinting("Du bist wie fast jeder im Kurs durchgefallen.");
             cout << endl;
-            sleepFor(3000000);
+            sleepFor(3000000); //Pause, um Ausgabe dramatischer zu machen
             passed = false; 
         }
         else if (guess > num) 

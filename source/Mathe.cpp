@@ -24,11 +24,11 @@ bool Mathe::specificRun()
     cout << endl << "Berechnen Sie 3x7(mod 5)! Es genuegt lediglich das Ergebnis zu notieren." << endl;
     cout << endl << ">> ";
     cin >> userInput;
-    try
+    try //Exception-Handling
     {
-        z = stoi(userInput); 
+        z = stoi(userInput); //Wenn keine Ganzzahl eingegeben wird
     }
-    catch(const std::exception& e)
+    catch(const std::exception& e) //const Referenz => Polymorphie
     {
         slowPrinting("Du hast leider keine Zahl eingegeben. Ich hoffe das war nur ein Fehler."); 
     }
