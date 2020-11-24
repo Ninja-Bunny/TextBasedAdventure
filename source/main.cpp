@@ -23,7 +23,7 @@ int main() {
     else 
     {   
         cout << termcolor::white; 
-        cout << endl << "Schade! Dann bis zum naechsten Mal!";
+        cout << "Bis zum naechsten Mal!";
     }
     
     return 0;
