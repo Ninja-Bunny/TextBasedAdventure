@@ -21,7 +21,7 @@ int main() {
     else 
     {   
         cout << termcolor::white; 
-        cout << endl << "Schade! Dann bis zum naechsten Mal!";
+        slowPrinting("Bis zum naechsten Mal!");
     }
     
     return 0;
